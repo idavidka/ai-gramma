@@ -1,6 +1,5 @@
 import {
   createContext,
-  createElement,
   useContext,
   useMemo,
   useState,
@@ -61,7 +60,9 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     return { lang, setLang, t, pick };
   }, [lang]);
 
-  return createElement(LanguageContext.Provider, { value }, children);
+  return (
+    <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>
+  );
 }
 
 export function useLanguage(): LanguageContextValue {
