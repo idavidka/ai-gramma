@@ -1,10 +1,14 @@
 import type { GrammarExample } from '../../types/aigramma';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 export function ExampleSentence({ example }: { example: GrammarExample }) {
+  const { lang } = useLanguage();
+  const translation = lang === 'hu' ? example.hungarian : example.english;
+
   return (
     <figure className="example">
       <div className="example-ai">{example.aigramma}</div>
-      <figcaption className="example-hu">{example.hungarian}</figcaption>
+      <figcaption className="example-hu">{translation}</figcaption>
       {example.gloss ? <div className="example-gloss">{example.gloss}</div> : null}
     </figure>
   );

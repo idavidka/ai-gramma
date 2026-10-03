@@ -2236,7 +2236,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0280",
-    "word": "lüme",
+    "word": "lume",
     "meaning": "glow",
     "meaningHu": "ragyogás",
     "category": "abstract",
@@ -6658,7 +6658,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0809",
-    "word": "bale2",
+    "word": "balez",
     "meaning": "tool (bal)",
     "meaningHu": "eszköz (bal)",
     "category": "everyday",
@@ -6667,7 +6667,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0810",
-    "word": "came2",
+    "word": "camez",
     "meaning": "path (cam)",
     "meaningHu": "ösvény (cam)",
     "category": "places",
@@ -6676,7 +6676,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0811",
-    "word": "dale2",
+    "word": "dalez",
     "meaning": "mark (dal)",
     "meaningHu": "jel (dal)",
     "category": "abstract",
@@ -6685,7 +6685,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0812",
-    "word": "fame2",
+    "word": "famez",
     "meaning": "group (fam)",
     "meaningHu": "csoport (fam)",
     "category": "people",
@@ -6694,7 +6694,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0813",
-    "word": "gare2",
+    "word": "garez",
     "meaning": "piece (gar)",
     "meaningHu": "darab (gar)",
     "category": "everyday",
@@ -6703,7 +6703,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0814",
-    "word": "hile2",
+    "word": "hilez",
     "meaning": "layer (hil)",
     "meaningHu": "réteg (hil)",
     "category": "nature",
@@ -6712,7 +6712,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0815",
-    "word": "jale2",
+    "word": "jalez",
     "meaning": "signal (jal)",
     "meaningHu": "jelzés (jal)",
     "category": "communication",
@@ -6721,7 +6721,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0816",
-    "word": "kale2",
+    "word": "kalez",
     "meaning": "vessel (kal)",
     "meaningHu": "edény (kal)",
     "category": "everyday",
@@ -6730,7 +6730,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0817",
-    "word": "lame2",
+    "word": "lamez",
     "meaning": "shade (lam)",
     "meaningHu": "árnyék (lam)",
     "category": "nature",
@@ -6739,7 +6739,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0818",
-    "word": "mire2",
+    "word": "mirez",
     "meaning": "ridge (mir)",
     "meaningHu": "gerinc (mir)",
     "category": "nature",
@@ -6748,7 +6748,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0819",
-    "word": "nare2",
+    "word": "narez",
     "meaning": "tool (nar)",
     "meaningHu": "eszköz (nar)",
     "category": "everyday",
@@ -6757,7 +6757,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0820",
-    "word": "pale2",
+    "word": "palez",
     "meaning": "path (pal)",
     "meaningHu": "ösvény (pal)",
     "category": "places",
@@ -6766,7 +6766,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0821",
-    "word": "rale2",
+    "word": "ralez",
     "meaning": "mark (ral)",
     "meaningHu": "jel (ral)",
     "category": "abstract",
@@ -6775,7 +6775,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0822",
-    "word": "sile2",
+    "word": "silez",
     "meaning": "group (sil)",
     "meaningHu": "csoport (sil)",
     "category": "people",
@@ -6784,7 +6784,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0823",
-    "word": "tale2",
+    "word": "talez",
     "meaning": "piece (tal)",
     "meaningHu": "darab (tal)",
     "category": "everyday",
@@ -6793,7 +6793,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0824",
-    "word": "vare2",
+    "word": "varez",
     "meaning": "layer (var)",
     "meaningHu": "réteg (var)",
     "category": "nature",
@@ -6802,7 +6802,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0825",
-    "word": "zale2",
+    "word": "zalez",
     "meaning": "signal (zal)",
     "meaningHu": "jelzés (zal)",
     "category": "communication",
@@ -6811,7 +6811,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0826",
-    "word": "beme2",
+    "word": "bemez",
     "meaning": "vessel (bem)",
     "meaningHu": "edény (bem)",
     "category": "everyday",
@@ -6820,7 +6820,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0827",
-    "word": "ceme2",
+    "word": "cemez",
     "meaning": "shade (cem)",
     "meaningHu": "árnyék (cem)",
     "category": "nature",
@@ -6829,7 +6829,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0828",
-    "word": "deme2",
+    "word": "demez",
     "meaning": "ridge (dem)",
     "meaningHu": "gerinc (dem)",
     "category": "nature",
@@ -6838,7 +6838,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0829",
-    "word": "feme2",
+    "word": "femez",
     "meaning": "tool (fem)",
     "meaningHu": "eszköz (fem)",
     "category": "everyday",
@@ -6847,7 +6847,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0830",
-    "word": "geme2",
+    "word": "gemez",
     "meaning": "path (gem)",
     "meaningHu": "ösvény (gem)",
     "category": "places",
@@ -6856,7 +6856,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0831",
-    "word": "heme2",
+    "word": "hemez",
     "meaning": "mark (hem)",
     "meaningHu": "jel (hem)",
     "category": "abstract",
@@ -6865,7 +6865,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0832",
-    "word": "jeme2",
+    "word": "jemez",
     "meaning": "group (jem)",
     "meaningHu": "csoport (jem)",
     "category": "people",
@@ -6874,7 +6874,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0833",
-    "word": "keme2",
+    "word": "kemez",
     "meaning": "piece (kem)",
     "meaningHu": "darab (kem)",
     "category": "everyday",
@@ -6883,7 +6883,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0834",
-    "word": "leme2",
+    "word": "lemez",
     "meaning": "layer (lem)",
     "meaningHu": "réteg (lem)",
     "category": "nature",
@@ -6892,7 +6892,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0835",
-    "word": "neme2",
+    "word": "nemez",
     "meaning": "signal (nem)",
     "meaningHu": "jelzés (nem)",
     "category": "communication",
@@ -6901,7 +6901,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0836",
-    "word": "peme2",
+    "word": "pemez",
     "meaning": "vessel (pem)",
     "meaningHu": "edény (pem)",
     "category": "everyday",
@@ -6910,7 +6910,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0837",
-    "word": "reme2",
+    "word": "remez",
     "meaning": "shade (rem)",
     "meaningHu": "árnyék (rem)",
     "category": "nature",
@@ -6919,7 +6919,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0838",
-    "word": "seme2",
+    "word": "semez",
     "meaning": "ridge (sem)",
     "meaningHu": "gerinc (sem)",
     "category": "nature",
@@ -6928,7 +6928,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0839",
-    "word": "teme2",
+    "word": "temez",
     "meaning": "tool (tem)",
     "meaningHu": "eszköz (tem)",
     "category": "everyday",
@@ -6937,7 +6937,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0840",
-    "word": "veme2",
+    "word": "vemez",
     "meaning": "path (vem)",
     "meaningHu": "ösvény (vem)",
     "category": "places",
@@ -6946,7 +6946,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0841",
-    "word": "zeme2",
+    "word": "zemez",
     "meaning": "mark (zem)",
     "meaningHu": "jel (zem)",
     "category": "abstract",
@@ -6955,7 +6955,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0842",
-    "word": "bore2",
+    "word": "borez",
     "meaning": "group (bor)",
     "meaningHu": "csoport (bor)",
     "category": "people",
@@ -6964,7 +6964,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0843",
-    "word": "core2",
+    "word": "corez",
     "meaning": "piece (cor)",
     "meaningHu": "darab (cor)",
     "category": "everyday",
@@ -6973,7 +6973,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0844",
-    "word": "dore2",
+    "word": "dorez",
     "meaning": "layer (dor)",
     "meaningHu": "réteg (dor)",
     "category": "nature",
@@ -6982,7 +6982,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0845",
-    "word": "fore2",
+    "word": "forez",
     "meaning": "signal (for)",
     "meaningHu": "jelzés (for)",
     "category": "communication",
@@ -6991,7 +6991,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0846",
-    "word": "gore2",
+    "word": "gorez",
     "meaning": "vessel (gor)",
     "meaningHu": "edény (gor)",
     "category": "everyday",
@@ -7000,7 +7000,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0847",
-    "word": "hore2",
+    "word": "horez",
     "meaning": "shade (hor)",
     "meaningHu": "árnyék (hor)",
     "category": "nature",
@@ -7009,7 +7009,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0848",
-    "word": "jore2",
+    "word": "jorez",
     "meaning": "ridge (jor)",
     "meaningHu": "gerinc (jor)",
     "category": "nature",
@@ -7018,7 +7018,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0849",
-    "word": "kore2",
+    "word": "korez",
     "meaning": "tool (kor)",
     "meaningHu": "eszköz (kor)",
     "category": "everyday",
@@ -7027,7 +7027,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0850",
-    "word": "lore2",
+    "word": "lorez",
     "meaning": "path (lor)",
     "meaningHu": "ösvény (lor)",
     "category": "places",
@@ -7036,7 +7036,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0851",
-    "word": "more2",
+    "word": "morez",
     "meaning": "mark (mor)",
     "meaningHu": "jel (mor)",
     "category": "abstract",
@@ -7045,7 +7045,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0852",
-    "word": "nore2",
+    "word": "norez",
     "meaning": "group (nor)",
     "meaningHu": "csoport (nor)",
     "category": "people",
@@ -7054,7 +7054,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0853",
-    "word": "pore2",
+    "word": "porez",
     "meaning": "piece (por)",
     "meaningHu": "darab (por)",
     "category": "everyday",
@@ -7063,7 +7063,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0854",
-    "word": "rore2",
+    "word": "rorez",
     "meaning": "layer (ror)",
     "meaningHu": "réteg (ror)",
     "category": "nature",
@@ -7072,7 +7072,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0855",
-    "word": "sore2",
+    "word": "sorez",
     "meaning": "signal (sor)",
     "meaningHu": "jelzés (sor)",
     "category": "communication",
@@ -7081,7 +7081,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0856",
-    "word": "tore2",
+    "word": "torez",
     "meaning": "vessel (tor)",
     "meaningHu": "edény (tor)",
     "category": "everyday",
@@ -7090,7 +7090,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0857",
-    "word": "vore2",
+    "word": "vorez",
     "meaning": "shade (vor)",
     "meaningHu": "árnyék (vor)",
     "category": "nature",
@@ -7099,7 +7099,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0858",
-    "word": "zore2",
+    "word": "zorez",
     "meaning": "ridge (zor)",
     "meaningHu": "gerinc (zor)",
     "category": "nature",
@@ -7108,7 +7108,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0859",
-    "word": "bune2",
+    "word": "bunez",
     "meaning": "tool (bun)",
     "meaningHu": "eszköz (bun)",
     "category": "everyday",
@@ -7117,7 +7117,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0860",
-    "word": "cune2",
+    "word": "cunez",
     "meaning": "path (cun)",
     "meaningHu": "ösvény (cun)",
     "category": "places",
@@ -7126,7 +7126,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0861",
-    "word": "dune2",
+    "word": "dunez",
     "meaning": "mark (dun)",
     "meaningHu": "jel (dun)",
     "category": "abstract",
@@ -7135,7 +7135,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0862",
-    "word": "fune2",
+    "word": "funez",
     "meaning": "group (fun)",
     "meaningHu": "csoport (fun)",
     "category": "people",
@@ -7144,7 +7144,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0863",
-    "word": "gune2",
+    "word": "gunez",
     "meaning": "piece (gun)",
     "meaningHu": "darab (gun)",
     "category": "everyday",
@@ -7153,7 +7153,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0864",
-    "word": "hune2",
+    "word": "hunez",
     "meaning": "layer (hun)",
     "meaningHu": "réteg (hun)",
     "category": "nature",
@@ -7162,7 +7162,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0865",
-    "word": "june2",
+    "word": "junez",
     "meaning": "signal (jun)",
     "meaningHu": "jelzés (jun)",
     "category": "communication",
@@ -7171,7 +7171,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0866",
-    "word": "kune2",
+    "word": "kunez",
     "meaning": "vessel (kun)",
     "meaningHu": "edény (kun)",
     "category": "everyday",
@@ -7180,7 +7180,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0867",
-    "word": "lune2",
+    "word": "lunez",
     "meaning": "shade (lun)",
     "meaningHu": "árnyék (lun)",
     "category": "nature",
@@ -7189,7 +7189,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0868",
-    "word": "mune2",
+    "word": "munez",
     "meaning": "ridge (mun)",
     "meaningHu": "gerinc (mun)",
     "category": "nature",
@@ -7198,7 +7198,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0869",
-    "word": "nune2",
+    "word": "nunez",
     "meaning": "tool (nun)",
     "meaningHu": "eszköz (nun)",
     "category": "everyday",
@@ -7207,7 +7207,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0870",
-    "word": "pune2",
+    "word": "punez",
     "meaning": "path (pun)",
     "meaningHu": "ösvény (pun)",
     "category": "places",
@@ -7216,7 +7216,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0871",
-    "word": "rune2",
+    "word": "runez",
     "meaning": "mark (run)",
     "meaningHu": "jel (run)",
     "category": "abstract",
@@ -7225,7 +7225,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0872",
-    "word": "sune2",
+    "word": "sunez",
     "meaning": "group (sun)",
     "meaningHu": "csoport (sun)",
     "category": "people",
@@ -7234,7 +7234,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0873",
-    "word": "tune2",
+    "word": "tunez",
     "meaning": "piece (tun)",
     "meaningHu": "darab (tun)",
     "category": "everyday",
@@ -7243,7 +7243,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0874",
-    "word": "vune2",
+    "word": "vunez",
     "meaning": "layer (vun)",
     "meaningHu": "réteg (vun)",
     "category": "nature",
@@ -7252,7 +7252,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0875",
-    "word": "zune2",
+    "word": "zunez",
     "meaning": "signal (zun)",
     "meaningHu": "jelzés (zun)",
     "category": "communication",
@@ -7261,7 +7261,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0876",
-    "word": "bake2",
+    "word": "bakez",
     "meaning": "vessel (bak)",
     "meaningHu": "edény (bak)",
     "category": "everyday",
@@ -7270,7 +7270,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0877",
-    "word": "cake2",
+    "word": "cakez",
     "meaning": "shade (cak)",
     "meaningHu": "árnyék (cak)",
     "category": "nature",
@@ -7279,7 +7279,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0878",
-    "word": "dake2",
+    "word": "dakez",
     "meaning": "ridge (dak)",
     "meaningHu": "gerinc (dak)",
     "category": "nature",
@@ -7288,7 +7288,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0879",
-    "word": "fake2",
+    "word": "fakez",
     "meaning": "tool (fak)",
     "meaningHu": "eszköz (fak)",
     "category": "everyday",
@@ -7297,7 +7297,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0880",
-    "word": "gake2",
+    "word": "gakez",
     "meaning": "path (gak)",
     "meaningHu": "ösvény (gak)",
     "category": "places",
@@ -7306,7 +7306,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0881",
-    "word": "hake2",
+    "word": "hakez",
     "meaning": "mark (hak)",
     "meaningHu": "jel (hak)",
     "category": "abstract",
@@ -7315,7 +7315,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0882",
-    "word": "jake2",
+    "word": "jakez",
     "meaning": "group (jak)",
     "meaningHu": "csoport (jak)",
     "category": "people",
@@ -7324,7 +7324,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0883",
-    "word": "kake2",
+    "word": "kakez",
     "meaning": "piece (kak)",
     "meaningHu": "darab (kak)",
     "category": "everyday",
@@ -7333,7 +7333,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0884",
-    "word": "lake2",
+    "word": "lakez",
     "meaning": "layer (lak)",
     "meaningHu": "réteg (lak)",
     "category": "nature",
@@ -7342,7 +7342,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0885",
-    "word": "make2",
+    "word": "makez",
     "meaning": "signal (mak)",
     "meaningHu": "jelzés (mak)",
     "category": "communication",
@@ -7351,7 +7351,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0886",
-    "word": "nake2",
+    "word": "nakez",
     "meaning": "vessel (nak)",
     "meaningHu": "edény (nak)",
     "category": "everyday",
@@ -7360,7 +7360,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0887",
-    "word": "pake2",
+    "word": "pakez",
     "meaning": "shade (pak)",
     "meaningHu": "árnyék (pak)",
     "category": "nature",
@@ -7369,7 +7369,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0888",
-    "word": "rake2",
+    "word": "rakez",
     "meaning": "ridge (rak)",
     "meaningHu": "gerinc (rak)",
     "category": "nature",
@@ -7378,7 +7378,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0889",
-    "word": "sake2",
+    "word": "sakez",
     "meaning": "tool (sak)",
     "meaningHu": "eszköz (sak)",
     "category": "everyday",
@@ -7387,7 +7387,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0890",
-    "word": "take2",
+    "word": "takez",
     "meaning": "path (tak)",
     "meaningHu": "ösvény (tak)",
     "category": "places",
@@ -7396,7 +7396,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0891",
-    "word": "vake2",
+    "word": "vakez",
     "meaning": "mark (vak)",
     "meaningHu": "jel (vak)",
     "category": "abstract",
@@ -7405,7 +7405,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0892",
-    "word": "zake2",
+    "word": "zakez",
     "meaning": "group (zak)",
     "meaningHu": "csoport (zak)",
     "category": "people",
@@ -7414,7 +7414,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0893",
-    "word": "bele2",
+    "word": "belez",
     "meaning": "piece (bel)",
     "meaningHu": "darab (bel)",
     "category": "everyday",
@@ -7423,7 +7423,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0894",
-    "word": "cele2",
+    "word": "celez",
     "meaning": "layer (cel)",
     "meaningHu": "réteg (cel)",
     "category": "nature",
@@ -7432,7 +7432,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0895",
-    "word": "dele2",
+    "word": "delez",
     "meaning": "signal (del)",
     "meaningHu": "jelzés (del)",
     "category": "communication",
@@ -7441,7 +7441,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0896",
-    "word": "fele2",
+    "word": "felez",
     "meaning": "vessel (fel)",
     "meaningHu": "edény (fel)",
     "category": "everyday",
@@ -7450,7 +7450,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0897",
-    "word": "gele2",
+    "word": "gelez",
     "meaning": "shade (gel)",
     "meaningHu": "árnyék (gel)",
     "category": "nature",
@@ -7459,7 +7459,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0898",
-    "word": "hele2",
+    "word": "helez",
     "meaning": "ridge (hel)",
     "meaningHu": "gerinc (hel)",
     "category": "nature",
@@ -7468,7 +7468,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0899",
-    "word": "jele2",
+    "word": "jelez",
     "meaning": "tool (jel)",
     "meaningHu": "eszköz (jel)",
     "category": "everyday",
@@ -7477,7 +7477,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0900",
-    "word": "kele2",
+    "word": "kelez",
     "meaning": "path (kel)",
     "meaningHu": "ösvény (kel)",
     "category": "places",
@@ -7486,7 +7486,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0901",
-    "word": "lele2",
+    "word": "lelez",
     "meaning": "mark (lel)",
     "meaningHu": "jel (lel)",
     "category": "abstract",
@@ -7495,7 +7495,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0902",
-    "word": "mele2",
+    "word": "melez",
     "meaning": "group (mel)",
     "meaningHu": "csoport (mel)",
     "category": "people",
@@ -7504,7 +7504,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0903",
-    "word": "nele2",
+    "word": "nelez",
     "meaning": "piece (nel)",
     "meaningHu": "darab (nel)",
     "category": "everyday",
@@ -7513,7 +7513,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0904",
-    "word": "pele2",
+    "word": "pelez",
     "meaning": "layer (pel)",
     "meaningHu": "réteg (pel)",
     "category": "nature",
@@ -7522,7 +7522,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0905",
-    "word": "rele2",
+    "word": "relez",
     "meaning": "signal (rel)",
     "meaningHu": "jelzés (rel)",
     "category": "communication",
@@ -7531,7 +7531,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0906",
-    "word": "sele2",
+    "word": "selez",
     "meaning": "vessel (sel)",
     "meaningHu": "edény (sel)",
     "category": "everyday",
@@ -7540,7 +7540,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0907",
-    "word": "tele2",
+    "word": "telez",
     "meaning": "shade (tel)",
     "meaningHu": "árnyék (tel)",
     "category": "nature",
@@ -7549,7 +7549,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0908",
-    "word": "vele2",
+    "word": "velez",
     "meaning": "ridge (vel)",
     "meaningHu": "gerinc (vel)",
     "category": "nature",
@@ -7558,7 +7558,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0909",
-    "word": "bale3",
+    "word": "balew",
     "meaning": "tool (bal)",
     "meaningHu": "eszköz (bal)",
     "category": "everyday",
@@ -7567,7 +7567,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0910",
-    "word": "came3",
+    "word": "camew",
     "meaning": "path (cam)",
     "meaningHu": "ösvény (cam)",
     "category": "places",
@@ -7576,7 +7576,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0911",
-    "word": "dale3",
+    "word": "dalew",
     "meaning": "mark (dal)",
     "meaningHu": "jel (dal)",
     "category": "abstract",
@@ -7585,7 +7585,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0912",
-    "word": "fame3",
+    "word": "famew",
     "meaning": "group (fam)",
     "meaningHu": "csoport (fam)",
     "category": "people",
@@ -7594,7 +7594,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0913",
-    "word": "gare3",
+    "word": "garew",
     "meaning": "piece (gar)",
     "meaningHu": "darab (gar)",
     "category": "everyday",
@@ -7603,7 +7603,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0914",
-    "word": "hile3",
+    "word": "hilew",
     "meaning": "layer (hil)",
     "meaningHu": "réteg (hil)",
     "category": "nature",
@@ -7612,7 +7612,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0915",
-    "word": "jale3",
+    "word": "jalew",
     "meaning": "signal (jal)",
     "meaningHu": "jelzés (jal)",
     "category": "communication",
@@ -7621,7 +7621,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0916",
-    "word": "kale3",
+    "word": "kalew",
     "meaning": "vessel (kal)",
     "meaningHu": "edény (kal)",
     "category": "everyday",
@@ -7630,7 +7630,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0917",
-    "word": "lame3",
+    "word": "lamew",
     "meaning": "shade (lam)",
     "meaningHu": "árnyék (lam)",
     "category": "nature",
@@ -7639,7 +7639,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0918",
-    "word": "mire3",
+    "word": "mirew",
     "meaning": "ridge (mir)",
     "meaningHu": "gerinc (mir)",
     "category": "nature",
@@ -7648,7 +7648,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0919",
-    "word": "nare3",
+    "word": "narew",
     "meaning": "tool (nar)",
     "meaningHu": "eszköz (nar)",
     "category": "everyday",
@@ -7657,7 +7657,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0920",
-    "word": "pale3",
+    "word": "palew",
     "meaning": "path (pal)",
     "meaningHu": "ösvény (pal)",
     "category": "places",
@@ -7666,7 +7666,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0921",
-    "word": "rale3",
+    "word": "ralew",
     "meaning": "mark (ral)",
     "meaningHu": "jel (ral)",
     "category": "abstract",
@@ -7675,7 +7675,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0922",
-    "word": "sile3",
+    "word": "silew",
     "meaning": "group (sil)",
     "meaningHu": "csoport (sil)",
     "category": "people",
@@ -7684,7 +7684,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0923",
-    "word": "tale3",
+    "word": "talew",
     "meaning": "piece (tal)",
     "meaningHu": "darab (tal)",
     "category": "everyday",
@@ -7693,7 +7693,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0924",
-    "word": "vare3",
+    "word": "varew",
     "meaning": "layer (var)",
     "meaningHu": "réteg (var)",
     "category": "nature",
@@ -7702,7 +7702,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0925",
-    "word": "zale3",
+    "word": "zalew",
     "meaning": "signal (zal)",
     "meaningHu": "jelzés (zal)",
     "category": "communication",
@@ -7711,7 +7711,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0926",
-    "word": "beme3",
+    "word": "bemew",
     "meaning": "vessel (bem)",
     "meaningHu": "edény (bem)",
     "category": "everyday",
@@ -7720,7 +7720,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0927",
-    "word": "ceme3",
+    "word": "cemew",
     "meaning": "shade (cem)",
     "meaningHu": "árnyék (cem)",
     "category": "nature",
@@ -7729,7 +7729,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0928",
-    "word": "deme3",
+    "word": "demew",
     "meaning": "ridge (dem)",
     "meaningHu": "gerinc (dem)",
     "category": "nature",
@@ -7738,7 +7738,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0929",
-    "word": "feme3",
+    "word": "femew",
     "meaning": "tool (fem)",
     "meaningHu": "eszköz (fem)",
     "category": "everyday",
@@ -7747,7 +7747,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0930",
-    "word": "geme3",
+    "word": "gemew",
     "meaning": "path (gem)",
     "meaningHu": "ösvény (gem)",
     "category": "places",
@@ -7756,7 +7756,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0931",
-    "word": "heme3",
+    "word": "hemew",
     "meaning": "mark (hem)",
     "meaningHu": "jel (hem)",
     "category": "abstract",
@@ -7765,7 +7765,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0932",
-    "word": "jeme3",
+    "word": "jemew",
     "meaning": "group (jem)",
     "meaningHu": "csoport (jem)",
     "category": "people",
@@ -7774,7 +7774,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0933",
-    "word": "keme3",
+    "word": "kemew",
     "meaning": "piece (kem)",
     "meaningHu": "darab (kem)",
     "category": "everyday",
@@ -7783,7 +7783,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0934",
-    "word": "leme3",
+    "word": "lemew",
     "meaning": "layer (lem)",
     "meaningHu": "réteg (lem)",
     "category": "nature",
@@ -7792,7 +7792,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0935",
-    "word": "neme3",
+    "word": "nemew",
     "meaning": "signal (nem)",
     "meaningHu": "jelzés (nem)",
     "category": "communication",
@@ -7801,7 +7801,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0936",
-    "word": "peme3",
+    "word": "pemew",
     "meaning": "vessel (pem)",
     "meaningHu": "edény (pem)",
     "category": "everyday",
@@ -7810,7 +7810,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0937",
-    "word": "reme3",
+    "word": "remew",
     "meaning": "shade (rem)",
     "meaningHu": "árnyék (rem)",
     "category": "nature",
@@ -7819,7 +7819,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0938",
-    "word": "seme3",
+    "word": "semew",
     "meaning": "ridge (sem)",
     "meaningHu": "gerinc (sem)",
     "category": "nature",
@@ -7828,7 +7828,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0939",
-    "word": "teme3",
+    "word": "temew",
     "meaning": "tool (tem)",
     "meaningHu": "eszköz (tem)",
     "category": "everyday",
@@ -7837,7 +7837,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0940",
-    "word": "veme3",
+    "word": "vemew",
     "meaning": "path (vem)",
     "meaningHu": "ösvény (vem)",
     "category": "places",
@@ -7846,7 +7846,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0941",
-    "word": "zeme3",
+    "word": "zemew",
     "meaning": "mark (zem)",
     "meaningHu": "jel (zem)",
     "category": "abstract",
@@ -7855,7 +7855,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0942",
-    "word": "bore3",
+    "word": "borew",
     "meaning": "group (bor)",
     "meaningHu": "csoport (bor)",
     "category": "people",
@@ -7864,7 +7864,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0943",
-    "word": "core3",
+    "word": "corew",
     "meaning": "piece (cor)",
     "meaningHu": "darab (cor)",
     "category": "everyday",
@@ -7873,7 +7873,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0944",
-    "word": "dore3",
+    "word": "dorew",
     "meaning": "layer (dor)",
     "meaningHu": "réteg (dor)",
     "category": "nature",
@@ -7882,7 +7882,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0945",
-    "word": "fore3",
+    "word": "forew",
     "meaning": "signal (for)",
     "meaningHu": "jelzés (for)",
     "category": "communication",
@@ -7891,7 +7891,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0946",
-    "word": "gore3",
+    "word": "gorew",
     "meaning": "vessel (gor)",
     "meaningHu": "edény (gor)",
     "category": "everyday",
@@ -7900,7 +7900,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0947",
-    "word": "hore3",
+    "word": "horew",
     "meaning": "shade (hor)",
     "meaningHu": "árnyék (hor)",
     "category": "nature",
@@ -7909,7 +7909,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0948",
-    "word": "jore3",
+    "word": "jorew",
     "meaning": "ridge (jor)",
     "meaningHu": "gerinc (jor)",
     "category": "nature",
@@ -7918,7 +7918,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0949",
-    "word": "kore3",
+    "word": "korew",
     "meaning": "tool (kor)",
     "meaningHu": "eszköz (kor)",
     "category": "everyday",
@@ -7927,7 +7927,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0950",
-    "word": "lore3",
+    "word": "lorew",
     "meaning": "path (lor)",
     "meaningHu": "ösvény (lor)",
     "category": "places",
@@ -7936,7 +7936,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0951",
-    "word": "more3",
+    "word": "morew",
     "meaning": "mark (mor)",
     "meaningHu": "jel (mor)",
     "category": "abstract",
@@ -7945,7 +7945,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0952",
-    "word": "nore3",
+    "word": "norew",
     "meaning": "group (nor)",
     "meaningHu": "csoport (nor)",
     "category": "people",
@@ -7954,7 +7954,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0953",
-    "word": "pore3",
+    "word": "porew",
     "meaning": "piece (por)",
     "meaningHu": "darab (por)",
     "category": "everyday",
@@ -7963,7 +7963,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0954",
-    "word": "rore3",
+    "word": "rorew",
     "meaning": "layer (ror)",
     "meaningHu": "réteg (ror)",
     "category": "nature",
@@ -7972,7 +7972,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0955",
-    "word": "sore3",
+    "word": "sorew",
     "meaning": "signal (sor)",
     "meaningHu": "jelzés (sor)",
     "category": "communication",
@@ -7981,7 +7981,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0956",
-    "word": "tore3",
+    "word": "torew",
     "meaning": "vessel (tor)",
     "meaningHu": "edény (tor)",
     "category": "everyday",
@@ -7990,7 +7990,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0957",
-    "word": "vore3",
+    "word": "vorew",
     "meaning": "shade (vor)",
     "meaningHu": "árnyék (vor)",
     "category": "nature",
@@ -7999,7 +7999,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0958",
-    "word": "zore3",
+    "word": "zorew",
     "meaning": "ridge (zor)",
     "meaningHu": "gerinc (zor)",
     "category": "nature",
@@ -8008,7 +8008,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0959",
-    "word": "bune3",
+    "word": "bunew",
     "meaning": "tool (bun)",
     "meaningHu": "eszköz (bun)",
     "category": "everyday",
@@ -8017,7 +8017,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0960",
-    "word": "cune3",
+    "word": "cunew",
     "meaning": "path (cun)",
     "meaningHu": "ösvény (cun)",
     "category": "places",
@@ -8026,7 +8026,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0961",
-    "word": "dune3",
+    "word": "dunew",
     "meaning": "mark (dun)",
     "meaningHu": "jel (dun)",
     "category": "abstract",
@@ -8035,7 +8035,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0962",
-    "word": "fune3",
+    "word": "funew",
     "meaning": "group (fun)",
     "meaningHu": "csoport (fun)",
     "category": "people",
@@ -8044,7 +8044,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0963",
-    "word": "gune3",
+    "word": "gunew",
     "meaning": "piece (gun)",
     "meaningHu": "darab (gun)",
     "category": "everyday",
@@ -8053,7 +8053,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0964",
-    "word": "hune3",
+    "word": "hunew",
     "meaning": "layer (hun)",
     "meaningHu": "réteg (hun)",
     "category": "nature",
@@ -8062,7 +8062,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0965",
-    "word": "june3",
+    "word": "junew",
     "meaning": "signal (jun)",
     "meaningHu": "jelzés (jun)",
     "category": "communication",
@@ -8071,7 +8071,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0966",
-    "word": "kune3",
+    "word": "kunew",
     "meaning": "vessel (kun)",
     "meaningHu": "edény (kun)",
     "category": "everyday",
@@ -8080,7 +8080,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0967",
-    "word": "lune3",
+    "word": "lunew",
     "meaning": "shade (lun)",
     "meaningHu": "árnyék (lun)",
     "category": "nature",
@@ -8089,7 +8089,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0968",
-    "word": "mune3",
+    "word": "munew",
     "meaning": "ridge (mun)",
     "meaningHu": "gerinc (mun)",
     "category": "nature",
@@ -8098,7 +8098,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0969",
-    "word": "nune3",
+    "word": "nunew",
     "meaning": "tool (nun)",
     "meaningHu": "eszköz (nun)",
     "category": "everyday",
@@ -8107,7 +8107,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0970",
-    "word": "pune3",
+    "word": "punew",
     "meaning": "path (pun)",
     "meaningHu": "ösvény (pun)",
     "category": "places",
@@ -8116,7 +8116,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0971",
-    "word": "rune3",
+    "word": "runew",
     "meaning": "mark (run)",
     "meaningHu": "jel (run)",
     "category": "abstract",
@@ -8125,7 +8125,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0972",
-    "word": "sune3",
+    "word": "sunew",
     "meaning": "group (sun)",
     "meaningHu": "csoport (sun)",
     "category": "people",
@@ -8134,7 +8134,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0973",
-    "word": "tune3",
+    "word": "tunew",
     "meaning": "piece (tun)",
     "meaningHu": "darab (tun)",
     "category": "everyday",
@@ -8143,7 +8143,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0974",
-    "word": "vune3",
+    "word": "vunew",
     "meaning": "layer (vun)",
     "meaningHu": "réteg (vun)",
     "category": "nature",
@@ -8152,7 +8152,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0975",
-    "word": "zune3",
+    "word": "zunew",
     "meaning": "signal (zun)",
     "meaningHu": "jelzés (zun)",
     "category": "communication",
@@ -8161,7 +8161,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0976",
-    "word": "bake3",
+    "word": "bakew",
     "meaning": "vessel (bak)",
     "meaningHu": "edény (bak)",
     "category": "everyday",
@@ -8170,7 +8170,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0977",
-    "word": "cake3",
+    "word": "cakew",
     "meaning": "shade (cak)",
     "meaningHu": "árnyék (cak)",
     "category": "nature",
@@ -8179,7 +8179,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0978",
-    "word": "dake3",
+    "word": "dakew",
     "meaning": "ridge (dak)",
     "meaningHu": "gerinc (dak)",
     "category": "nature",
@@ -8188,7 +8188,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0979",
-    "word": "fake3",
+    "word": "fakew",
     "meaning": "tool (fak)",
     "meaningHu": "eszköz (fak)",
     "category": "everyday",
@@ -8197,7 +8197,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0980",
-    "word": "gake3",
+    "word": "gakew",
     "meaning": "path (gak)",
     "meaningHu": "ösvény (gak)",
     "category": "places",
@@ -8206,7 +8206,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0981",
-    "word": "hake3",
+    "word": "hakew",
     "meaning": "mark (hak)",
     "meaningHu": "jel (hak)",
     "category": "abstract",
@@ -8215,7 +8215,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0982",
-    "word": "jake3",
+    "word": "jakew",
     "meaning": "group (jak)",
     "meaningHu": "csoport (jak)",
     "category": "people",
@@ -8224,7 +8224,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0983",
-    "word": "kake3",
+    "word": "kakew",
     "meaning": "piece (kak)",
     "meaningHu": "darab (kak)",
     "category": "everyday",
@@ -8233,7 +8233,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0984",
-    "word": "lake3",
+    "word": "lakew",
     "meaning": "layer (lak)",
     "meaningHu": "réteg (lak)",
     "category": "nature",
@@ -8242,7 +8242,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0985",
-    "word": "make3",
+    "word": "makew",
     "meaning": "signal (mak)",
     "meaningHu": "jelzés (mak)",
     "category": "communication",
@@ -8251,7 +8251,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0986",
-    "word": "nake3",
+    "word": "nakew",
     "meaning": "vessel (nak)",
     "meaningHu": "edény (nak)",
     "category": "everyday",
@@ -8260,7 +8260,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0987",
-    "word": "pake3",
+    "word": "pakew",
     "meaning": "shade (pak)",
     "meaningHu": "árnyék (pak)",
     "category": "nature",
@@ -8269,7 +8269,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0988",
-    "word": "rake3",
+    "word": "rakew",
     "meaning": "ridge (rak)",
     "meaningHu": "gerinc (rak)",
     "category": "nature",
@@ -8278,7 +8278,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0989",
-    "word": "sake3",
+    "word": "sakew",
     "meaning": "tool (sak)",
     "meaningHu": "eszköz (sak)",
     "category": "everyday",
@@ -8287,7 +8287,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0990",
-    "word": "take3",
+    "word": "takew",
     "meaning": "path (tak)",
     "meaningHu": "ösvény (tak)",
     "category": "places",
@@ -8296,7 +8296,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0991",
-    "word": "vake3",
+    "word": "vakew",
     "meaning": "mark (vak)",
     "meaningHu": "jel (vak)",
     "category": "abstract",
@@ -8305,7 +8305,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0992",
-    "word": "zake3",
+    "word": "zakew",
     "meaning": "group (zak)",
     "meaningHu": "csoport (zak)",
     "category": "people",
@@ -8314,7 +8314,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0993",
-    "word": "bele3",
+    "word": "belew",
     "meaning": "piece (bel)",
     "meaningHu": "darab (bel)",
     "category": "everyday",
@@ -8323,7 +8323,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0994",
-    "word": "cele3",
+    "word": "celew",
     "meaning": "layer (cel)",
     "meaningHu": "réteg (cel)",
     "category": "nature",
@@ -8332,7 +8332,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0995",
-    "word": "dele3",
+    "word": "delew",
     "meaning": "signal (del)",
     "meaningHu": "jelzés (del)",
     "category": "communication",
@@ -8341,7 +8341,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0996",
-    "word": "fele3",
+    "word": "felew",
     "meaning": "vessel (fel)",
     "meaningHu": "edény (fel)",
     "category": "everyday",
@@ -8350,7 +8350,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0997",
-    "word": "gele3",
+    "word": "gelew",
     "meaning": "shade (gel)",
     "meaningHu": "árnyék (gel)",
     "category": "nature",
@@ -8359,7 +8359,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0998",
-    "word": "hele3",
+    "word": "helew",
     "meaning": "ridge (hel)",
     "meaningHu": "gerinc (hel)",
     "category": "nature",
@@ -8368,7 +8368,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w0999",
-    "word": "jele3",
+    "word": "jelew",
     "meaning": "tool (jel)",
     "meaningHu": "eszköz (jel)",
     "category": "everyday",
@@ -8377,7 +8377,7 @@ export const VOCABULARY: VocabularyEntry[] = [
   },
   {
     "id": "w1000",
-    "word": "kele3",
+    "word": "kelew",
     "meaning": "path (kel)",
     "meaningHu": "ösvény (kel)",
     "category": "places",

@@ -2,48 +2,62 @@ import { ExampleList } from '../components/ExampleSentence/ExampleSentence';
 import { GrammarTable } from '../components/GrammarTable/GrammarTable';
 import { RememberBox } from '../components/RememberBox/RememberBox';
 import { WordBuilder } from '../components/WordBuilder/WordBuilder';
-import { CASE_ORDER_NOTE_HU, CASES } from '../data/aigramma/cases';
+import { CASE_ORDER_NOTE, CASES } from '../data/aigramma/cases';
+import { dualLabel } from '../data/aigramma/suffixes';
+import { useLanguage } from '../i18n/LanguageContext';
 
 export function Cases() {
+  const { lang, pick } = useLanguage();
+
   return (
     <article>
-      <h1>Esetek</h1>
+      <h1>{pick('Cases', 'Esetek')}</h1>
       <p className="lead">
-        Mivel csak három igeidő van, a pontosabb viszonyokat gyakran az esetek
-        fejezik ki — szabályosan, két harmóniaváltozattal.
+        {pick(
+          'With only three tenses, finer relations often use cases — regular, fictional, dual-shaped endings.',
+          'Mivel csak három igeidő van, a pontosabb viszonyokat gyakran az esetek fejezik ki — szabályos, fiktív, kettős alakú ragokkal.',
+        )}
       </p>
 
       <section className="section">
-        <h2 className="section-title">Áttekintő táblázat</h2>
+        <h2 className="section-title">{pick('Overview', 'Áttekintés')}</h2>
         <GrammarTable
           rows={CASES}
           columns={[
-            { key: 'n', header: 'Eset', render: (r) => r.nameHu },
-            { key: 'm', header: 'Jelentés', render: (r) => r.meaningHu },
+            {
+              key: 'n',
+              header: pick('Case', 'Eset'),
+              render: (r) => (lang === 'hu' ? r.nameHu : r.name),
+            },
+            {
+              key: 'm',
+              header: pick('Meaning', 'Jelentés'),
+              render: (r) => (lang === 'hu' ? r.meaningHu : r.meaning),
+            },
             {
               key: 's',
-              header: 'Toldalék',
-              render: (r) =>
-                r.suffix.back || r.suffix.front
-                  ? `-${r.suffix.back}/-${r.suffix.front}`
-                  : '∅',
+              header: pick('Suffix shapes', 'Toldalékalakok'),
+              render: (r) => dualLabel(r.suffix),
             },
-            { key: 'u', header: 'Használat', render: (r) => r.usageHu },
+            {
+              key: 'u',
+              header: pick('Usage', 'Használat'),
+              render: (r) => (lang === 'hu' ? r.usageHu : r.usage),
+            },
           ]}
         />
-        <p>{CASE_ORDER_NOTE_HU}</p>
+        <p>{pick(CASE_ORDER_NOTE.en, CASE_ORDER_NOTE.hu)}</p>
       </section>
 
       {CASES.map((c) => (
         <section className="section" key={c.id} id={c.id}>
-          <h2 className="section-title">{c.nameHu}</h2>
+          <h2 className="section-title">{lang === 'hu' ? c.nameHu : c.name}</h2>
           <p>
-            <strong>Jelentés:</strong> {c.meaningHu} ({c.meaning})
+            <strong>{pick('Meaning', 'Jelentés')}:</strong>{' '}
+            {lang === 'hu' ? c.meaningHu : c.meaning}
           </p>
-          <div className="rule-block">
-            toldalék: -{c.suffix.back || '∅'} / -{c.suffix.front || '∅'}
-          </div>
-          <p>{c.usageHu}</p>
+          <div className="rule-block">{dualLabel(c.suffix)}</div>
+          <p>{lang === 'hu' ? c.usageHu : c.usage}</p>
           <ExampleList examples={c.examples} />
         </section>
       ))}
@@ -51,8 +65,10 @@ export function Cases() {
       <WordBuilder />
 
       <RememberBox>
-        Tizenkét eset, mindegyiknek pontosan két (vagy nulla) alakja van. Nincs
-        rendhagyó esetvégződés.
+        {pick(
+          'Twelve cases, each with exactly the dual-shape pattern. No irregular case endings.',
+          'Tizenkét eset, mindegyik a kettős alak mintáját követi. Nincs rendhagyó esetvégződés.',
+        )}
       </RememberBox>
     </article>
   );

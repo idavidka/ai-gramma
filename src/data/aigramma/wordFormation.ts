@@ -1,13 +1,13 @@
 import type { DerivationalAffix, GrammarExample } from '../../types/aigramma';
 
 /**
- * Regular derivational morphology.
- * Related words share a predictable root; suffixes never alter the stem.
+ * Derivational morphology — dual suffixes or fixed prefixes.
+ * All forms are fictional and accent-free.
  */
 export const DERIVATIONAL_AFFIXES: DerivationalAffix[] = [
   {
     id: 'agent',
-    form: { back: 'aro', front: 'ero' },
+    form: { afterVowel: 'ro', afterConsonant: { back: 'uro', front: 'iro' } },
     type: 'suffix',
     meaning: 'agent / doer',
     meaningHu: 'cselekvő / foglalkozás',
@@ -15,19 +15,21 @@ export const DERIVATIONAL_AFFIXES: DerivationalAffix[] = [
     examples: [
       {
         id: 'wf-ag-1',
-        aigramma: 'instru + aro → instruaro',
+        aigramma: 'instru + ro → instruro',
+        english: 'teach → teacher',
         hungarian: 'tanít → tanár',
       },
       {
         id: 'wf-ag-2',
-        aigramma: 'labor + aro → laboraro',
+        aigramma: 'labor + uro → laboruro',
+        english: 'work → worker',
         hungarian: 'dolgozik → munkás',
       },
     ],
   },
   {
     id: 'abstract',
-    form: { back: 'aso', front: 'eso' },
+    form: { afterVowel: 'so', afterConsonant: { back: 'uso', front: 'iso' } },
     type: 'suffix',
     meaning: 'abstract noun',
     meaningHu: 'elvont főnév',
@@ -35,19 +37,21 @@ export const DERIVATIONAL_AFFIXES: DerivationalAffix[] = [
     examples: [
       {
         id: 'wf-ab-1',
-        aigramma: 'bona + aso → bonaso',
+        aigramma: 'bona → strip -a root bon + so?  Use: bon + uso → bonuso',
+        english: 'good → goodness',
         hungarian: 'jó → jóság',
       },
       {
         id: 'wf-ab-2',
-        aigramma: 'liber + aso → liberaso',
+        aigramma: 'liber + uso → liberuso',
+        english: 'free → freedom',
         hungarian: 'szabad → szabadság',
       },
     ],
   },
   {
     id: 'place',
-    form: { back: 'ejo', front: 'ejö' },
+    form: { afterVowel: 'jo', afterConsonant: { back: 'ujo', front: 'ijo' } },
     type: 'suffix',
     meaning: 'place',
     meaningHu: 'hely',
@@ -55,14 +59,15 @@ export const DERIVATIONAL_AFFIXES: DerivationalAffix[] = [
     examples: [
       {
         id: 'wf-pl-1',
-        aigramma: 'lern + ejo → lernejo',
-        hungarian: 'tanul → iskola / tanulóhely',
+        aigramma: 'lern + ujo → lernujo',
+        english: 'learn → learning place / school',
+        hungarian: 'tanul → tanulóhely',
       },
     ],
   },
   {
     id: 'adjective',
-    form: { back: 'a', front: 'e' },
+    form: { afterVowel: 'na', afterConsonant: { back: 'una', front: 'ina' } },
     type: 'suffix',
     meaning: 'adjective from noun/verb',
     meaningHu: 'melléknévképző',
@@ -70,34 +75,37 @@ export const DERIVATIONAL_AFFIXES: DerivationalAffix[] = [
     examples: [
       {
         id: 'wf-adj-1',
-        aigramma: 'oro + a → oroa',
+        aigramma: 'oro + na → orona',
+        english: 'gold → golden',
         hungarian: 'arany → arany (melléknév)',
       },
     ],
   },
   {
     id: 'adverb',
-    form: { back: 'e', front: 'e' },
+    form: { afterVowel: 'ne', afterConsonant: { back: 'une', front: 'ine' } },
     type: 'suffix',
-    meaning: 'adverb from adjective',
-    meaningHu: 'határozó a melléknévből',
+    meaning: 'adverb from adjective root',
+    meaningHu: 'határozóképző',
     produces: 'adverb',
     examples: [
       {
         id: 'wf-adv-1',
-        aigramma: 'rapida → rapide',
+        aigramma: 'rapid + une → rapidune',
+        english: 'fast → quickly',
         hungarian: 'gyors → gyorsan',
       },
       {
         id: 'wf-adv-2',
-        aigramma: 'bona → bone',
+        aigramma: 'bona → bone (lexical adverb pair)',
+        english: 'good → well',
         hungarian: 'jó → jól',
       },
     ],
   },
   {
     id: 'verbal_noun',
-    form: { back: 'ado', front: 'edo' },
+    form: { afterVowel: 'do', afterConsonant: { back: 'udo', front: 'ido' } },
     type: 'suffix',
     meaning: 'verbal noun / process',
     meaningHu: 'igenév / folyamat',
@@ -105,14 +113,15 @@ export const DERIVATIONAL_AFFIXES: DerivationalAffix[] = [
     examples: [
       {
         id: 'wf-vn-1',
-        aigramma: 'instru + ado → instruado',
+        aigramma: 'instru + do → instrudo',
+        english: 'teach → teaching',
         hungarian: 'tanít → tanítás',
       },
     ],
   },
   {
     id: 'patient',
-    form: { back: 'ato', front: 'eto' },
+    form: { afterVowel: 'to', afterConsonant: { back: 'uto', front: 'ito' } },
     type: 'suffix',
     meaning: 'patient / result',
     meaningHu: 'elszenvedő / eredmény',
@@ -120,14 +129,15 @@ export const DERIVATIONAL_AFFIXES: DerivationalAffix[] = [
     examples: [
       {
         id: 'wf-pt-1',
-        aigramma: 'instru + ato → instruato',
+        aigramma: 'instru + to → instruto',
+        english: 'teach → student / pupil',
         hungarian: 'tanít → tanítvány',
       },
     ],
   },
   {
     id: 'causative',
-    form: { back: 'ig', front: 'ig' },
+    form: { afterVowel: 'ig', afterConsonant: { back: 'uig', front: 'iig' } },
     type: 'suffix',
     meaning: 'causative verb',
     meaningHu: 'műveltető ige',
@@ -135,55 +145,71 @@ export const DERIVATIONAL_AFFIXES: DerivationalAffix[] = [
     examples: [
       {
         id: 'wf-cau-1',
-        aigramma: 'lern + ig → lernig',
-        hungarian: 'tanul → taníttat / megtanít',
+        aigramma: 'lern + uig → lernuig',
+        english: 'learn → make learn / teach',
+        hungarian: 'tanul → megtanít',
       },
     ],
   },
   {
     id: 'negation_prefix',
-    form: 'mal',
+    form: 'ko',
     type: 'prefix',
-    meaning: 'opposite / negation of quality',
+    meaning: 'opposite / quality negation',
     meaningHu: 'ellentét / minőség tagadása',
     produces: 'same',
     examples: [
       {
         id: 'wf-neg-1',
-        aigramma: 'mal + bona → malbona',
+        aigramma: 'ko + bona → kobona',
+        english: 'good → bad',
         hungarian: 'jó → rossz',
       },
       {
         id: 'wf-neg-2',
-        aigramma: 'mal + granda → malgranda',
+        aigramma: 'ko + granda → kogranda',
+        english: 'big → small',
         hungarian: 'nagy → kicsi',
       },
     ],
   },
 ];
 
+// Clean awkward abstract example
+DERIVATIONAL_AFFIXES[1]!.examples[0] = {
+  id: 'wf-ab-1',
+  aigramma: 'bon + uso → bonuso',
+  english: 'good → goodness',
+  hungarian: 'jó → jóság',
+};
+
 export const WORD_FAMILY_EXAMPLE: GrammarExample[] = [
-  { id: 'fam-1', aigramma: 'instru', hungarian: 'tanít (igei tő)' },
-  { id: 'fam-2', aigramma: 'instruaro', hungarian: 'tanár' },
-  { id: 'fam-3', aigramma: 'instruado', hungarian: 'tanítás' },
-  { id: 'fam-4', aigramma: 'instruato', hungarian: 'tanítvány' },
-  { id: 'fam-5', aigramma: 'instrua', hungarian: 'oktató jellegű' },
-  { id: 'fam-6', aigramma: 'instruejo', hungarian: 'oktatóhely' },
+  { id: 'fam-1', aigramma: 'instru', english: 'teach (verb stem)', hungarian: 'tanít (igei tő)' },
+  { id: 'fam-2', aigramma: 'instruro', english: 'teacher', hungarian: 'tanár' },
+  { id: 'fam-3', aigramma: 'instrudo', english: 'teaching', hungarian: 'tanítás' },
+  { id: 'fam-4', aigramma: 'instruto', english: 'pupil / student', hungarian: 'tanítvány' },
+  { id: 'fam-5', aigramma: 'instruna', english: 'instructive', hungarian: 'oktató jellegű' },
+  { id: 'fam-6', aigramma: 'instrujo', english: 'teaching place', hungarian: 'oktatóhely' },
 ];
 
-export const COMPOUND_RULE_HU = `Az összetett szavak tövek egymásutánja: főnév/ige + főnév.
-A második tag a fej. Példa: vapor + navo → vapornavo (gőzhajó).
-Nincs tőváltozás az összetételben sem.`;
+export const COMPOUND_RULE = {
+  en: `Compounds are stem + stem. The second stem is the head.
+No stem change inside compounds. Example: vapor + navo → vapornavo (steamship).`,
+  hu: `Az összetételek tő + tő. A második tag a fej.
+Nincs tőváltozás. Példa: vapor + navo → vapornavo (gőzhajó).`,
+};
 
 export const COMPOUND_EXAMPLES: GrammarExample[] = [
   {
     id: 'cmp-1',
     aigramma: 'kita + tomo → kitatomo',
-    hungarian: 'könyvtár (szó szerint: könyv+ház)',
+    english: 'book-house / library',
+    hungarian: 'könyvtár (könyv+ház)',
   },
   {
     id: 'cmp-2',
     aigramma: 'sola + lumo → solalumo',
+    english: 'sunlight',
     hungarian: 'napfény',
   },
 ];

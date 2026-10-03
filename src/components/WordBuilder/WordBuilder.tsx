@@ -1,49 +1,42 @@
 import { useState } from 'react';
 import { CASES } from '../../data/aigramma/cases';
 import { PERSONS } from '../../data/aigramma/persons';
+import { dualLabel } from '../../data/aigramma/suffixes';
+import { useLanguage } from '../../i18n/LanguageContext';
 import type { CaseId, Person } from '../../types/aigramma';
 import { buildNoun, nounBreakdown } from '../../utils/morphology';
 import { describeHarmony } from '../../utils/vowelHarmony';
 
 const STEM_OPTIONS = [
-  { stem: 'tomo', label: 'tomo (ház)' },
-  { stem: 'kere', label: 'kere (kert)' },
-  { stem: 'kita', label: 'kita (könyv)' },
-  { stem: 'amiko', label: 'amiko (barát)' },
-  { stem: 'skole', label: 'skole (iskola)' },
-  { stem: 'lüme', label: 'lüme (fény)' },
+  { stem: 'tomo', label: 'tomo (house / ház)' },
+  { stem: 'kere', label: 'kere (garden / kert)' },
+  { stem: 'kita', label: 'kita (book / könyv)' },
+  { stem: 'kiv', label: 'kiv (bicycle / bicikli)' },
+  { stem: 'hop', label: 'hop (tent / sátor)' },
+  { stem: 'amiko', label: 'amiko (friend / barát)' },
 ];
 
 export function WordBuilder() {
+  const { t, lang } = useLanguage();
   const [stem, setStem] = useState('tomo');
   const [caseId, setCaseId] = useState<CaseId>('inessive');
   const [plural, setPlural] = useState(true);
   const [person, setPerson] = useState<Person | ''>('1sg');
 
   const personValue = person || null;
-  const result = buildNoun({
-    stem,
-    caseId,
-    plural,
-    person: personValue,
-  });
-  const parts = nounBreakdown({
-    stem,
-    caseId,
-    plural,
-    person: personValue,
-  });
+  const result = buildNoun({ stem, caseId, plural, person: personValue });
+  const parts = nounBreakdown({ stem, caseId, plural, person: personValue });
 
   return (
     <section className="builder">
-      <h3>Szóépítő</h3>
+      <h3>{t('builder.wordTitle')}</h3>
       <p className="lead">
-        TŐ + ESET + TÖBBES + BIRTOKOS — a sorrend soha nem változik. Harmónia:{' '}
+        {t('builder.wordLead')} {t('builder.harmony')}:{' '}
         <strong>{describeHarmony(stem)}</strong>
       </p>
       <div className="builder-grid">
         <label>
-          Tő
+          {t('builder.stem')}
           <select value={stem} onChange={(e) => setStem(e.target.value)}>
             {STEM_OPTIONS.map((o) => (
               <option key={o.stem} value={o.stem}>
@@ -53,38 +46,38 @@ export function WordBuilder() {
           </select>
         </label>
         <label>
-          Eset
+          {t('builder.case')}
           <select
             value={caseId}
             onChange={(e) => setCaseId(e.target.value as CaseId)}
           >
             {CASES.map((c) => (
               <option key={c.id} value={c.id}>
-                {c.nameHu} ({c.suffix.back || '∅'}/{c.suffix.front || '∅'})
+                {lang === 'hu' ? c.nameHu : c.name} ({dualLabel(c.suffix)})
               </option>
             ))}
           </select>
         </label>
         <label>
-          Többes szám
+          {t('builder.plural')}
           <select
             value={plural ? 'yes' : 'no'}
             onChange={(e) => setPlural(e.target.value === 'yes')}
           >
-            <option value="no">Egyes</option>
-            <option value="yes">Többes (-ak/-ek)</option>
+            <option value="no">{t('builder.singular')}</option>
+            <option value="yes">{t('builder.pluralYes')}</option>
           </select>
         </label>
         <label>
-          Birtokos
+          {t('builder.possessive')}
           <select
             value={person}
             onChange={(e) => setPerson(e.target.value as Person | '')}
           >
-            <option value="">Nincs</option>
+            <option value="">{t('builder.none')}</option>
             {PERSONS.map((p) => (
               <option key={p.id} value={p.id}>
-                {p.labelHu} (-{p.possessiveSuffix.back}/-{p.possessiveSuffix.front})
+                {lang === 'hu' ? p.labelHu : p.label} ({dualLabel(p.possessiveSuffix)})
               </option>
             ))}
           </select>
@@ -95,7 +88,7 @@ export function WordBuilder() {
           <span key={part.label} style={{ display: 'contents' }}>
             {index > 0 ? <span className="arrow">→</span> : null}
             <span className="chip">
-              <small>{part.label}</small> {part.value}
+              <small>{lang === 'hu' ? part.labelHu : part.label}</small> {part.value}
             </span>
           </span>
         ))}

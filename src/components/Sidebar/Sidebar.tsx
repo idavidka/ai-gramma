@@ -1,12 +1,15 @@
 import { NavLink } from 'react-router-dom';
 import { NAV_SECTIONS } from '../../data/aigramma/grammar';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
+  const { t } = useLanguage();
+
   return (
     <aside className="sidebar">
       {NAV_SECTIONS.map((section) => (
-        <div className="sidebar-section" key={section.title}>
-          <h2>{section.title}</h2>
+        <div className="sidebar-section" key={section.titleKey}>
+          <h2>{t(section.titleKey)}</h2>
           {section.items.map((item) => (
             <NavLink
               key={item.path}
@@ -15,7 +18,7 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
               className={({ isActive }) => (isActive ? 'active' : undefined)}
               onClick={onNavigate}
             >
-              {item.label}
+              {t(item.labelKey)}
             </NavLink>
           ))}
         </div>

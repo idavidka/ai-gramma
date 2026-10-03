@@ -182,6 +182,27 @@ code,
   justify-content: flex-end;
 }
 
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+.lang-switch select {
+  border: 1px solid var(--line);
+  background: white;
+  border-radius: 999px;
+  padding: 0.45rem 0.7rem;
+}
+
+@media (max-width: 560px) {
+  .lang-switch-label {
+    display: none;
+  }
+}
+
 .menu-toggle {
   display: none;
   border: 1px solid var(--line);

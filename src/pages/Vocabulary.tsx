@@ -5,8 +5,10 @@ import {
   VOCABULARY,
   VOCABULARY_CATEGORIES,
 } from '../data/aigramma/vocabulary';
+import { useLanguage } from '../i18n/LanguageContext';
 
 export function Vocabulary() {
+  const { lang, t, pick } = useLanguage();
   const [query, setQuery] = useState('');
   const [category, setCategory] = useState('all');
   const deferredQuery = useDeferredValue(query);
@@ -27,21 +29,23 @@ export function Vocabulary() {
 
   return (
     <article>
-      <h1>Szókincs — 1000 alapszó</h1>
+      <h1>{pick('Vocabulary — 1000 stems', 'Szókincs — 1000 alapszó')}</h1>
       <p className="lead">
-        Gyakorlati alaplexikon kategóriákkal és azonnali kereséssel. Összesen{' '}
-        {VOCABULARY.length} szó.
+        {pick(
+          `A practical core lexicon with categories and instant search. ${VOCABULARY.length} words total.`,
+          `Gyakorlati alaplexikon kategóriákkal és azonnali kereséssel. Összesen ${VOCABULARY.length} szó.`,
+        )}
       </p>
 
       <div className="vocab-toolbar">
         <input
           type="search"
-          placeholder="Keresés aigramma / magyar / angol…"
+          placeholder={t('vocab.search')}
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
         <select value={category} onChange={(e) => setCategory(e.target.value)}>
-          <option value="all">Minden kategória</option>
+          <option value="all">{t('vocab.allCategories')}</option>
           {VOCABULARY_CATEGORIES.map((c) => (
             <option key={c} value={c}>
               {c}
@@ -50,29 +54,36 @@ export function Vocabulary() {
         </select>
       </div>
 
-      <p style={{ color: 'var(--ink-soft)' }}>{filtered.length} találat</p>
+      <p style={{ color: 'var(--ink-soft)' }}>
+        {filtered.length} {t('vocab.results')}
+      </p>
 
       <div className="vocab-grid">
         {filtered.slice(0, 200).map((word) => (
-          <Link className="vocab-card" to={`/vocabulary/${word.id}`} key={word.id}>
+          <Link
+            className="vocab-card"
+            to={`/vocabulary/${word.id}`}
+            key={word.id}
+          >
             <div className="vocab-word">{word.word}</div>
-            <div>{word.meaningHu}</div>
+            <div>{lang === 'hu' ? word.meaningHu : word.meaning}</div>
             <div className="vocab-meta">
-              {word.meaning} · {word.partOfSpeech} · {word.category}
+              {lang === 'hu' ? word.meaning : word.meaningHu} ·{' '}
+              {word.partOfSpeech} · {word.category}
             </div>
           </Link>
         ))}
       </div>
 
       {filtered.length > 200 ? (
-        <p className="lead">
-          Csak az első 200 találat látszik — szűkítsd a keresést a többihez.
-        </p>
+        <p className="lead">{t('vocab.truncated')}</p>
       ) : null}
 
       <RememberBox>
-        Minden szótári tő változatlan marad a ragozásban. Ha ismered a tövet és a
-        szabályokat, végtelen sok alakot képezhetsz.
+        {pick(
+          'Every dictionary stem stays unchanged in inflection. Know the stem and the rules, and you can form endless shapes.',
+          'Minden szótári tő változatlan marad a ragozásban. Ha ismered a tövet és a szabályokat, végtelen sok alakot képezhetsz.',
+        )}
       </RememberBox>
     </article>
   );

@@ -2,7 +2,7 @@ import { CASES } from '../data/aigramma/cases';
 import { ALL_EXAMPLES } from '../data/aigramma/examples';
 import { GRAMMAR_CHAPTERS } from '../data/aigramma/grammar';
 import { MODES } from '../data/aigramma/modes';
-import { CORE_SUFFIX_TABLE } from '../data/aigramma/suffixes';
+import { CORE_SUFFIX_TABLE, dualLabel } from '../data/aigramma/suffixes';
 import { TENSES } from '../data/aigramma/tenses';
 import { VOCABULARY } from '../data/aigramma/vocabulary';
 import type { SearchItem } from '../types/aigramma';
@@ -20,7 +20,7 @@ export function buildSearchIndex(): SearchItem[] {
   for (const chapter of GRAMMAR_CHAPTERS) {
     items.push({
       id: `grammar-${chapter.id}`,
-      title: chapter.titleHu,
+      title: chapter.title,
       subtitle: chapter.summary,
       kind: 'grammar',
       path: chapter.path,
@@ -28,6 +28,7 @@ export function buildSearchIndex(): SearchItem[] {
         chapter.title,
         chapter.titleHu,
         chapter.summary,
+        chapter.summaryHu,
         ...chapter.keywords,
       ],
     });
@@ -37,7 +38,7 @@ export function buildSearchIndex(): SearchItem[] {
     items.push({
       id: `vocab-${word.id}`,
       title: word.word,
-      subtitle: `${word.meaningHu} · ${word.meaning}`,
+      subtitle: `${word.meaning} · ${word.meaningHu}`,
       kind: 'vocabulary',
       path: `/vocabulary/${word.id}`,
       keywords: [
@@ -53,8 +54,8 @@ export function buildSearchIndex(): SearchItem[] {
   for (const c of CASES) {
     items.push({
       id: `case-${c.id}`,
-      title: c.nameHu,
-      subtitle: `${c.meaningHu} · -${c.suffix.back}/-${c.suffix.front || '∅'}`,
+      title: c.name,
+      subtitle: `${c.meaning} · ${dualLabel(c.suffix)}`,
       kind: 'case',
       path: '/cases',
       keywords: [
@@ -62,8 +63,9 @@ export function buildSearchIndex(): SearchItem[] {
         c.nameHu,
         c.meaning,
         c.meaningHu,
-        c.suffix.back,
-        c.suffix.front,
+        c.suffix.afterVowel,
+        c.suffix.afterConsonant.back,
+        c.suffix.afterConsonant.front,
       ],
     });
   }
@@ -71,33 +73,47 @@ export function buildSearchIndex(): SearchItem[] {
   for (const s of CORE_SUFFIX_TABLE) {
     items.push({
       id: `suffix-${s.id}`,
-      title: s.nameHu,
-      subtitle: `-${s.suffix.back}/-${s.suffix.front || '∅'}`,
+      title: s.name,
+      subtitle: dualLabel(s.suffix),
       kind: 'suffix',
       path: '/reference',
-      keywords: [s.nameHu, s.category, s.suffix.back, s.suffix.front],
+      keywords: [
+        s.name,
+        s.nameHu,
+        s.category,
+        s.suffix.afterVowel,
+        s.suffix.afterConsonant.back,
+        s.suffix.afterConsonant.front,
+      ],
     });
   }
 
-  for (const t of TENSES) {
+  for (const tense of TENSES) {
     items.push({
-      id: `tense-${t.id}`,
-      title: t.nameHu,
-      subtitle: t.explanationHu,
+      id: `tense-${tense.id}`,
+      title: tense.name,
+      subtitle: tense.explanation,
       kind: 'tense',
       path: '/verbs',
-      keywords: [t.name, t.nameHu, t.explanationHu],
+      keywords: [tense.name, tense.nameHu, tense.explanation, tense.explanationHu],
     });
   }
 
-  for (const m of MODES) {
+  for (const mode of MODES) {
     items.push({
-      id: `mode-${m.id}`,
-      title: m.nameHu,
-      subtitle: m.explanationHu,
+      id: `mode-${mode.id}`,
+      title: mode.name,
+      subtitle: mode.explanation,
       kind: 'mode',
       path: '/modes',
-      keywords: [m.name, m.nameHu, m.explanationHu, m.formationHu],
+      keywords: [
+        mode.name,
+        mode.nameHu,
+        mode.explanation,
+        mode.explanationHu,
+        mode.formation,
+        mode.formationHu,
+      ],
     });
   }
 
@@ -105,10 +121,15 @@ export function buildSearchIndex(): SearchItem[] {
     items.push({
       id: `example-${ex.id}`,
       title: ex.aigramma,
-      subtitle: ex.hungarian,
+      subtitle: ex.english,
       kind: 'example',
       path: '/examples',
-      keywords: [ex.aigramma, ex.hungarian, ...(ex.tags ?? [])],
+      keywords: [
+        ex.aigramma,
+        ex.english,
+        ex.hungarian,
+        ...(ex.tags ?? []),
+      ],
     });
   }
 

@@ -13,6 +13,8 @@ export type Person = '1sg' | '2sg' | '3sg' | '1pl' | '2pl' | '3pl';
 
 export type HarmonyClass = 'back' | 'front';
 
+export type AppLanguage = 'en' | 'hu';
+
 export type PartOfSpeech =
   | 'noun'
   | 'verb'
@@ -63,9 +65,17 @@ export type CaseId =
   | 'instrumental'
   | 'abessive';
 
-export interface HarmonicSuffix {
-  back: string;
-  front: string;
+/**
+ * Dual-shape suffix:
+ * - afterVowel: consonant-initial form (attach to vowel-final bases)
+ * - afterConsonant: vowel-initial forms with front/back harmony
+ */
+export interface DualSuffix {
+  afterVowel: string;
+  afterConsonant: {
+    back: string;
+    front: string;
+  };
 }
 
 export interface CaseDefinition {
@@ -74,7 +84,7 @@ export interface CaseDefinition {
   nameHu: string;
   meaning: string;
   meaningHu: string;
-  suffix: HarmonicSuffix;
+  suffix: DualSuffix;
   usage: string;
   usageHu: string;
   examples: GrammarExample[];
@@ -85,16 +95,17 @@ export interface PersonDefinition {
   label: string;
   labelHu: string;
   pronoun: string;
+  pronounMeaning: string;
   pronounMeaningHu: string;
-  verbSuffix: HarmonicSuffix;
-  possessiveSuffix: HarmonicSuffix;
+  verbSuffix: DualSuffix;
+  possessiveSuffix: DualSuffix;
 }
 
 export interface TenseDefinition {
   id: Tense;
   name: string;
   nameHu: string;
-  suffix: HarmonicSuffix | { back: string; front: string };
+  suffix: DualSuffix;
   explanation: string;
   explanationHu: string;
   examples: GrammarExample[];
@@ -104,7 +115,7 @@ export interface ModeDefinition {
   id: Mode;
   name: string;
   nameHu: string;
-  suffix: HarmonicSuffix;
+  suffix: DualSuffix;
   explanation: string;
   explanationHu: string;
   formation: string;
@@ -126,8 +137,8 @@ export interface VocabularyEntry {
 export interface GrammarExample {
   id: string;
   aigramma: string;
+  english: string;
   hungarian: string;
-  english?: string;
   gloss?: string;
   tense?: Tense;
   mode?: Mode;
@@ -139,6 +150,7 @@ export interface AlphabetLetter {
   letter: string;
   ipa: string;
   example: string;
+  exampleMeaning: string;
   exampleMeaningHu: string;
   type: 'vowel' | 'consonant';
   harmony?: HarmonyClass | 'neutral';
@@ -148,12 +160,13 @@ export interface NumberEntry {
   value: number | string;
   word: string;
   kind: 'cardinal' | 'ordinal' | 'fraction' | 'approximate';
+  meaning: string;
   meaningHu: string;
 }
 
 export interface DerivationalAffix {
   id: string;
-  form: HarmonicSuffix | string;
+  form: DualSuffix | string;
   type: 'prefix' | 'suffix';
   meaning: string;
   meaningHu: string;
@@ -166,7 +179,9 @@ export interface GrammarChapter {
   title: string;
   titleHu: string;
   section: string;
+  sectionHu: string;
   summary: string;
+  summaryHu: string;
   path: string;
   keywords: string[];
 }
@@ -178,4 +193,11 @@ export interface SearchItem {
   kind: 'grammar' | 'vocabulary' | 'case' | 'suffix' | 'example' | 'mode' | 'tense';
   path: string;
   keywords: string[];
+}
+
+export function formatDualSuffix(suffix: DualSuffix): string {
+  const v = suffix.afterVowel || '∅';
+  const b = suffix.afterConsonant.back || '∅';
+  const f = suffix.afterConsonant.front || '∅';
+  return `-${v} / -${b}|-${f}`;
 }

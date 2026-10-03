@@ -1,20 +1,22 @@
 import { Link, useParams } from 'react-router-dom';
 import { GrammarTable } from '../components/GrammarTable/GrammarTable';
-import { getWordById } from '../data/aigramma/vocabulary';
-import { PERSONS } from '../data/aigramma/persons';
 import { CASES } from '../data/aigramma/cases';
+import { PERSONS } from '../data/aigramma/persons';
+import { getWordById } from '../data/aigramma/vocabulary';
+import { useLanguage } from '../i18n/LanguageContext';
 import { buildNoun, buildVerb } from '../utils/morphology';
 import { describeHarmony } from '../utils/vowelHarmony';
 
 export function WordDetail() {
   const { id } = useParams();
   const word = id ? getWordById(id) : undefined;
+  const { lang, t, pick } = useLanguage();
 
   if (!word) {
     return (
       <article>
-        <h1>Szó nem található</h1>
-        <Link to="/vocabulary">Vissza a szókincshez</Link>
+        <h1>{t('vocab.notFound')}</h1>
+        <Link to="/vocabulary">{t('vocab.back')}</Link>
       </article>
     );
   }
@@ -26,41 +28,53 @@ export function WordDetail() {
   return (
     <article>
       <p className="lead">
-        <Link to="/vocabulary">← Szókincs</Link>
+        <Link to="/vocabulary">{t('vocab.back')}</Link>
       </p>
       <h1>{word.word}</h1>
       <p className="lead">
-        {word.meaningHu} · {word.meaning}
+        {lang === 'hu' ? word.meaningHu : word.meaning}
+        {' · '}
+        {lang === 'hu' ? word.meaning : word.meaningHu}
       </p>
       <p>
-        Szófaj: <strong>{word.partOfSpeech}</strong> · Kategória:{' '}
-        <strong>{word.category}</strong> · Harmónia:{' '}
-        <strong>{describeHarmony(word.word)}</strong>
+        {t('vocab.pos')}: <strong>{word.partOfSpeech}</strong> ·{' '}
+        {t('vocab.category')}: <strong>{word.category}</strong> ·{' '}
+        {t('vocab.harmony')}: <strong>{describeHarmony(word.word)}</strong>
       </p>
       {word.notes ? <p>{word.notes}</p> : null}
 
       {isNounLike ? (
         <section className="section">
-          <h2 className="section-title">Esetminták</h2>
+          <h2 className="section-title">
+            {pick('Case patterns', 'Esetminták')}
+          </h2>
           <GrammarTable
             rows={CASES.slice(0, 8)}
             columns={[
-              { key: 'c', header: 'Eset', render: (c) => c.nameHu },
+              {
+                key: 'c',
+                header: pick('Case', 'Eset'),
+                render: (c) => (lang === 'hu' ? c.nameHu : c.name),
+              },
               {
                 key: 'f',
-                header: 'Alak',
+                header: pick('Form', 'Alak'),
                 render: (c) => buildNoun({ stem: word.word, caseId: c.id }),
               },
             ]}
           />
-          <h3>Birtokos alakok</h3>
+          <h3>{pick('Possessive forms', 'Birtokos alakok')}</h3>
           <GrammarTable
             rows={PERSONS}
             columns={[
-              { key: 'p', header: 'Személy', render: (p) => p.labelHu },
+              {
+                key: 'p',
+                header: pick('Person', 'Személy'),
+                render: (p) => (lang === 'hu' ? p.labelHu : p.label),
+              },
               {
                 key: 'f',
-                header: 'Alak',
+                header: pick('Form', 'Alak'),
                 render: (p) => buildNoun({ stem: word.word, person: p.id }),
               },
             ]}
@@ -70,27 +84,37 @@ export function WordDetail() {
 
       {isVerb ? (
         <section className="section">
-          <h2 className="section-title">Ragozási minták</h2>
+          <h2 className="section-title">
+            {pick('Conjugation patterns', 'Ragozási minták')}
+          </h2>
           <GrammarTable
             rows={PERSONS}
             columns={[
-              { key: 'p', header: 'Személy', render: (p) => p.label },
+              {
+                key: 'p',
+                header: pick('Person', 'Személy'),
+                render: (p) => (lang === 'hu' ? p.labelHu : p.label),
+              },
               {
                 key: 'pr',
-                header: 'Jelen',
+                header: pick('Present', 'Jelen'),
                 render: (p) => buildVerb({ stem: word.word, person: p.id }),
               },
               {
                 key: 'pa',
-                header: 'Múlt',
+                header: pick('Past', 'Múlt'),
                 render: (p) =>
                   buildVerb({ stem: word.word, tense: 'past', person: p.id }),
               },
               {
                 key: 'fu',
-                header: 'Jövő',
+                header: pick('Future', 'Jövő'),
                 render: (p) =>
-                  buildVerb({ stem: word.word, tense: 'future', person: p.id }),
+                  buildVerb({
+                    stem: word.word,
+                    tense: 'future',
+                    person: p.id,
+                  }),
               },
             ]}
           />

@@ -1,37 +1,61 @@
 export const PHONOLOGY = {
+  title: 'Sounds & writing',
   titleHu: 'Hangtan és írás',
-  principlesHu: [
-    'Minden betű egy hangot jelöl; az olvasás átlátható.',
-    'A hangsúly mindig az első szótagon van.',
-    'Nincs tőbeli hangváltakozás grammatikai okból.',
-    'Nincs mássalhangzó-hasonulás a toldalékolásban.',
-    'A magánhangzó-harmónia csak a toldalékot választja meg.',
+  principles: [
+    'Only plain Latin letters — no accented characters in Aigramma.',
+    'One letter, one sound; reading is transparent.',
+    'Stress always on the first syllable.',
+    'No grammatical stem changes.',
+    'No consonant assimilation when attaching suffixes.',
+    'Dual suffix shapes keep words pronounceable: C-initial after vowels, V-initial after consonants.',
   ],
+  principlesHu: [
+    'Csak ékezet nélküli latin betűk — az Aigrammában nincsenek ékezetes karakterek.',
+    'Egy betű, egy hang; az olvasás átlátható.',
+    'A hangsúly mindig az első szótagon van.',
+    'Nincs nyelvtani tőváltakozás.',
+    'Nincs mássalhangzó-hasonulás a toldalékoláskor.',
+    'A kettős toldalékalakok tartják ejthetőnek a szavakat: V után C-kezdés, C után V-kezdés.',
+  ],
+  syllable:
+    'Typical syllable: (C)V(C). Vowel sequences are allowed but uncommon in roots.',
   syllableHu:
-    'A tipikus szótag: (C)V(C). A magánhangzó-kapcsolatok megengedettek (ai, au), de ritkák a tövekben.',
+    'Tipikus szótag: (C)V(C). A magánhangzó-kapcsolatok megengedettek, de ritkák a tövekben.',
+  orthography:
+    'Latin orthography without diacritics. Letters w, x, y are full consonants in Aigramma.',
   orthographyHu:
-    'Latin betűs írás. Az s mindig [ʃ]. A hosszú magánhangzókat ékezet jelöli (á é í ó ú ő ű).',
+    'Ékezet nélküli latin írás. A w, x, y az Aigrammában teljes értékű mássalhangzók.',
 };
 
-export const DESIGN_PRINCIPLES_HU = [
+export const DESIGN_PRINCIPLES = [
   {
-    title: 'Maximális tanulhatóság',
-    body: 'Kevesebb kivétel, több átlátható szabály. Ha megérted a rendszert, új mondatokat építhetsz.',
+    title: 'Maximum learnability',
+    titleHu: 'Maximális tanulhatóság',
+    body: 'Few exceptions, clear rules. Understand the system — then build new sentences.',
+    bodyHu: 'Kevesebb kivétel, több átlátható szabály. Értsd a rendszert — aztán alkoss új mondatokat.',
   },
   {
-    title: 'Maximális regularitás',
-    body: 'Nincs rendhagyó ige, nincs rendhagyó főnév, nincs tőváltakozás.',
+    title: 'Maximum regularity',
+    titleHu: 'Maximális regularitás',
+    body: 'No irregular verbs or nouns. No stem changes. Fully fictional, easy endings.',
+    bodyHu: 'Nincs rendhagyó ige vagy főnév. Nincs tőváltakozás. Teljesen fiktív, könnyű ragok.',
   },
   {
-    title: 'Kötött toldaléksorrend',
-    body: 'A névszói és igei elemek mindig ugyanabban a sorrendben követik egymást.',
+    title: 'Dual suffix shapes',
+    titleHu: 'Kettős toldalékalakok',
+    body: 'Every suffix has a consonant-initial form (after vowels) and a vowel-initial form (after consonants).',
+    bodyHu: 'Minden toldaléknak van mássalhangzóval és magánhangzóval kezdődő alakja a tő végződése szerint.',
   },
   {
-    title: 'Három igeidő, öt mód',
-    body: 'A finom időviszonyokat esetek, határozók és kontextus fejezik ki — nem újabb igeidők.',
+    title: 'Fixed suffix order',
+    titleHu: 'Kötött toldaléksorrend',
+    body: 'Noun and verb slots always appear in the same order.',
+    bodyHu: 'A névszói és igei helyek mindig ugyanabban a sorrendben állnak.',
   },
   {
-    title: 'Opcionális névmások',
-    body: 'A személyragok gyakran elegendőek; a névmás hangsúlyra és tisztázásra való.',
+    title: 'Three tenses, five modes',
+    titleHu: 'Három igeidő, öt mód',
+    body: 'Finer time uses cases, adverbs, and context — never extra tenses.',
+    bodyHu: 'A finomabb időt esetek, határozók és kontextus fejezik ki — nem újabb igeidők.',
   },
 ];

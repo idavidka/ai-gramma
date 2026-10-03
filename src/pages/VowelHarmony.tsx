@@ -2,74 +2,74 @@ import { ExampleList } from '../components/ExampleSentence/ExampleSentence';
 import { GrammarTable } from '../components/GrammarTable/GrammarTable';
 import { RememberBox } from '../components/RememberBox/RememberBox';
 import {
-  BACK_VOWELS,
-  COMMON_HARMONIC_PAIRS,
-  FRONT_VOWELS,
+  COMMON_DUAL_PAIRS,
   HARMONY_EXAMPLES,
   HARMONY_RULES,
-  NEUTRAL_VOWELS,
+  dualSuffixDisplay,
 } from '../data/aigramma/vowelHarmony';
+import { BACK_VOWELS, FRONT_VOWELS } from '../utils/vowelHarmony';
+import { useLanguage } from '../i18n/LanguageContext';
 
 export function VowelHarmony() {
+  const { lang, pick } = useLanguage();
+
   return (
     <article>
-      <h1>{HARMONY_RULES.titleHu}</h1>
-      <p className="lead">{HARMONY_RULES.principleHu}</p>
+      <h1>
+        {pick('Vowel harmony & dual suffixes', 'Magánhangzó-harmónia és kettős ragok')}
+      </h1>
+      <p className="lead">
+        {pick(HARMONY_RULES.principle, HARMONY_RULES.principleHu)}
+      </p>
 
       <section className="section">
-        <h2 className="section-title">Mi ez?</h2>
-        <p>
-          A magánhangzó-harmónia azt mondja meg, hogy egy toldaléknak a hátsó vagy
-          az elülső változatát kell választanod. A tő betűi változatlanok maradnak.
-        </p>
-      </section>
-
-      <section className="section">
-        <h2 className="section-title">A szabály</h2>
+        <h2 className="section-title">{pick('The dual-suffix rule', 'A kettős toldalék szabálya')}</h2>
+        <p>{pick(HARMONY_RULES.dualRule, HARMONY_RULES.dualRuleHu)}</p>
         <div className="rule-block">
-          utolsó nem semleges magánhangzó → toldalékváltozat
+          vowel-final base → consonant-initial suffix (e.g. tomo + n → tomon)
           <br />
-          hátsó: {BACK_VOWELS.join(' ')} → A-típusú toldalék
+          consonant-final base → vowel-initial suffix (e.g. hop + un → hopun, kiv + in → kivin)
           <br />
-          elülső: {FRONT_VOWELS.join(' ')} → E-típusú toldalék
+          back vowels: {BACK_VOWELS.join(' ')} → u-series
           <br />
-          semleges: {NEUTRAL_VOWELS.join(' ')} (nem dönt; csak i/í → elülső)
+          front vowels: {FRONT_VOWELS.join(' ')} → i-series
         </div>
         <ol>
-          {HARMONY_RULES.stepsHu.map((s) => (
+          {(lang === 'hu' ? HARMONY_RULES.stepsHu : HARMONY_RULES.steps).map((s) => (
             <li key={s}>{s}</li>
           ))}
         </ol>
       </section>
 
       <section className="section">
-        <h2 className="section-title">Toldalékpárok</h2>
+        <h2 className="section-title">{pick('Suffix pairs', 'Toldalékpárok')}</h2>
         <GrammarTable
-          rows={[...COMMON_HARMONIC_PAIRS]}
+          rows={COMMON_DUAL_PAIRS}
           columns={[
-            { key: 'n', header: 'Szerep', render: (r) => r.name },
-            { key: 'b', header: 'Hátsó', render: (r) => `-${r.suffix.back || '∅'}` },
-            { key: 'f', header: 'Elülső', render: (r) => `-${r.suffix.front || '∅'}` },
-          ]}
-        />
-        <GrammarTable
-          rows={[...HARMONY_RULES.pairs]}
-          columns={[
-            { key: 'r', header: 'Szerep', render: (r) => r.role },
-            { key: 'b', header: 'Hátsó', render: (r) => r.back },
-            { key: 'f', header: 'Elülső', render: (r) => r.front },
+            {
+              key: 'n',
+              header: pick('Role', 'Szerep'),
+              render: (r) => (lang === 'hu' ? r.nameHu : r.name),
+            },
+            {
+              key: 's',
+              header: pick('Shapes', 'Alakok'),
+              render: (r) => dualSuffixDisplay(r.suffix),
+            },
           ]}
         />
       </section>
 
       <section className="section">
-        <h2 className="section-title">Példák</h2>
+        <h2 className="section-title">{pick('Examples', 'Példák')}</h2>
         <ExampleList examples={HARMONY_EXAMPLES} />
       </section>
 
       <RememberBox>
-        A harmónia a toldalékot választja meg — soha nem a tövet. Nincs
-        mássalhangzó-hasonulás sem.
+        {pick(
+          'Suffixes are fully fictional and regular. Harmony never changes the stem — only the vowel inside the V-initial suffix shape.',
+          'A toldalékok teljesen fiktívek és szabályosak. A harmónia soha nem a tövet változtatja — csak a magánhangzóval kezdődő alak belsejét.',
+        )}
       </RememberBox>
     </article>
   );

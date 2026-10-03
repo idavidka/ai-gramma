@@ -1,7 +1,7 @@
 import type { ModeDefinition } from '../../types/aigramma';
 
 /**
- * Exactly five grammatical modes.
+ * Exactly five modes. Dual-shaped mode markers after tense.
  * Verb template: STEM + TENSE + MODE + PERSON
  */
 export const MODES: ModeDefinition[] = [
@@ -9,7 +9,7 @@ export const MODES: ModeDefinition[] = [
     id: 'indicative',
     name: 'Indicative',
     nameHu: 'Kijelentő mód',
-    suffix: { back: '', front: '' },
+    suffix: { afterVowel: '', afterConsonant: { back: '', front: '' } },
     explanation: 'Neutral factual statements. Zero mode marker.',
     explanationHu: 'Tényszerű kijelentés. Nincs módjel.',
     formation: 'STEM + TENSE + ∅ + PERSON',
@@ -17,7 +17,8 @@ export const MODES: ModeDefinition[] = [
     examples: [
       {
         id: 'm-ind-1',
-        aigramma: 'Mi tomoban lemam.',
+        aigramma: 'Ma tomok lemam.',
+        english: 'I live in the house.',
         hungarian: 'A házban élek.',
         mode: 'indicative',
         tense: 'present',
@@ -25,7 +26,8 @@ export const MODES: ModeDefinition[] = [
       },
       {
         id: 'm-ind-2',
-        aigramma: 'Si berota edada.',
+        aigramma: 'Sa berot edad.',
+        english: 'He/she ate bread.',
         hungarian: 'Ő kenyeret evett.',
         mode: 'indicative',
         tense: 'past',
@@ -33,7 +35,8 @@ export const MODES: ModeDefinition[] = [
       },
       {
         id: 'm-ind-3',
-        aigramma: 'Min laboravamak.',
+        aigramma: 'Man laborabumin.',
+        english: 'We will work.',
         hungarian: 'Dolgozni fogunk.',
         mode: 'indicative',
         tense: 'future',
@@ -45,25 +48,28 @@ export const MODES: ModeDefinition[] = [
     id: 'interrogative',
     name: 'Interrogative',
     nameHu: 'Kérdő mód',
-    suffix: { back: 'ko', front: 'kö' },
+    suffix: { afterVowel: 'h', afterConsonant: { back: 'uh', front: 'ih' } },
     explanation:
-      'Yes/no questions use mode marker -ko/-kö. Question words stay in situ; no stem change.',
+      'Yes/no questions use -h / -uh|-ih. Question words stay in place; no stem change.',
     explanationHu:
-      'Az eldöntendő kérdések módjele -ko/-kö. A kérdőszavak a helyükön maradnak; a tő nem változik.',
-    formation: 'STEM + TENSE + -ko/-kö + PERSON',
-    formationHu: 'TŐ + IDŐ + -ko/-kö + SZEMÉLY',
+      'Eldöntendő kérdés: -h / -uh|-ih. A kérdőszavak a helyükön maradnak; a tő nem változik.',
+    formation: 'STEM + TENSE + -h/-uh|-ih + PERSON',
+    formationHu: 'TŐ + IDŐ + -h/-uh|-ih + SZEMÉLY',
     examples: [
       {
         id: 'm-int-1',
-        aigramma: 'Kalakom?',
-        hungarian: 'Járók-e? / Megyek?',
+        aigramma: 'Kalahum?',
+        english: 'Do I walk?',
+        hungarian: 'Járók-e?',
         mode: 'interrogative',
         tense: 'present',
         person: '1sg',
+        gloss: 'kala-h-um',
       },
       {
         id: 'm-int-2',
-        aigramma: 'Ti edakod?',
+        aigramma: 'Ca edahuc?',
+        english: 'Do you eat?',
         hungarian: 'Eszel?',
         mode: 'interrogative',
         tense: 'present',
@@ -71,15 +77,18 @@ export const MODES: ModeDefinition[] = [
       },
       {
         id: 'm-int-3',
-        aigramma: 'Si venadako?',
+        aigramma: 'Sa venaduh?',
+        english: 'Did he/she come?',
         hungarian: 'Eljött?',
         mode: 'interrogative',
         tense: 'past',
         person: '3sg',
+        gloss: 'vena-d-uh (after past -d, C-final → -uh)',
       },
       {
         id: 'm-int-4',
-        aigramma: 'Kiu tomoba irava?',
+        aigramma: 'Kiu tomop irab?',
+        english: 'Who will go into the house?',
         hungarian: 'Ki fog a házba menni?',
         mode: 'interrogative',
         tense: 'future',
@@ -87,7 +96,8 @@ export const MODES: ModeDefinition[] = [
       },
       {
         id: 'm-int-5',
-        aigramma: 'Kio ti volad?',
+        aigramma: 'Kio ca volac?',
+        english: 'What do you want?',
         hungarian: 'Mit akarsz?',
         mode: 'interrogative',
         tense: 'present',
@@ -99,17 +109,18 @@ export const MODES: ModeDefinition[] = [
     id: 'negative',
     name: 'Negative',
     nameHu: 'Tagadó mód',
-    suffix: { back: 'la', front: 'le' },
+    suffix: { afterVowel: 'x', afterConsonant: { back: 'ux', front: 'ix' } },
     explanation:
-      'Simple verbal negation uses -la/-le. For negating other modes, place the particle ala before the verb.',
+      'Simple verbal negation uses -x / -ux|-ix. To negate another mode, place particle na before the verb.',
     explanationHu:
-      'Az egyszerű igei tagadás módjele -la/-le. Más módok tagadásához az ala partikulát tesszük az ige elé.',
-    formation: 'STEM + TENSE + -la/-le + PERSON  |  ala + [other mode]',
-    formationHu: 'TŐ + IDŐ + -la/-le + SZEMÉLY  |  ala + [más mód]',
+      'Egyszerű igei tagadás: -x / -ux|-ix. Más mód tagadásához tedd a na partikulát az ige elé.',
+    formation: 'STEM + TENSE + -x/-ux|-ix + PERSON  |  na + [other mode]',
+    formationHu: 'TŐ + IDŐ + -x/-ux|-ix + SZEMÉLY  |  na + [más mód]',
     examples: [
       {
         id: 'm-neg-1',
-        aigramma: 'Kalalam.',
+        aigramma: 'Kalaxum.',
+        english: 'I do not walk.',
         hungarian: 'Nem járok.',
         mode: 'negative',
         tense: 'present',
@@ -117,7 +128,8 @@ export const MODES: ModeDefinition[] = [
       },
       {
         id: 'm-neg-2',
-        aigramma: 'Edalam.',
+        aigramma: 'Edaxum.',
+        english: 'I do not eat.',
         hungarian: 'Nem eszem.',
         mode: 'negative',
         tense: 'present',
@@ -125,16 +137,19 @@ export const MODES: ModeDefinition[] = [
       },
       {
         id: 'm-neg-3',
-        aigramma: 'Si vidadala.',
+        aigramma: 'Sa vidadux.',
+        english: 'He/she did not see.',
         hungarian: 'Ő nem látott.',
         mode: 'negative',
         tense: 'past',
         person: '3sg',
+        gloss: 'vida-d-ux',
       },
       {
         id: 'm-neg-4',
-        aigramma: 'Ala irahom!',
-        hungarian: 'Bárcsak ne mennék! / Ne menjek csak!',
+        aigramma: 'Na irawum!',
+        english: 'If only I would not go! / May I not go!',
+        hungarian: 'Bárcsak ne mennék!',
         mode: 'optative',
         tense: 'present',
         person: '1sg',
@@ -142,7 +157,8 @@ export const MODES: ModeDefinition[] = [
       },
       {
         id: 'm-neg-5',
-        aigramma: 'Ne, mi volalam.',
+        aigramma: 'Ne, ma volaxum.',
+        english: 'No, I do not want it.',
         hungarian: 'Nem, nem akarom.',
         mode: 'negative',
         tense: 'present',
@@ -154,25 +170,27 @@ export const MODES: ModeDefinition[] = [
     id: 'optative',
     name: 'Optative / Desiderative',
     nameHu: 'Óhajtó / kívánó mód',
-    suffix: { back: 'ho', front: 'hö' },
+    suffix: { afterVowel: 'w', afterConsonant: { back: 'uw', front: 'iw' } },
     explanation:
-      'Wishes, hopes, soft requests: “may…”, “let…”, “I wish…”. Distinct from conditional.',
+      'Wishes and soft requests: “may…”, “let…”, “I wish…”. Distinct from conditional.',
     explanationHu:
-      'Óhaj, remény, lágy kérés: „bárcsak…”, „hadd…”, „szeretném…”. Elkülönül a feltételes módtól.',
-    formation: 'STEM + TENSE + -ho/-hö + PERSON',
-    formationHu: 'TŐ + IDŐ + -ho/-hö + SZEMÉLY',
+      'Óhaj és lágy kérés: „bárcsak…”, „hadd…”. Elkülönül a feltételes módtól.',
+    formation: 'STEM + TENSE + -w/-uw|-iw + PERSON',
+    formationHu: 'TŐ + IDŐ + -w/-uw|-iw + SZEMÉLY',
     examples: [
       {
         id: 'm-opt-1',
-        aigramma: 'Paco venaho!',
-        hungarian: 'Bárcsak eljönne a béke! / Jöjjön el a béke!',
+        aigramma: 'Paco venaw!',
+        english: 'May peace come!',
+        hungarian: 'Jöjjön el a béke!',
         mode: 'optative',
         tense: 'present',
         person: '3sg',
       },
       {
         id: 'm-opt-2',
-        aigramma: 'Mi edahom.',
+        aigramma: 'Ma edawum.',
+        english: 'I wish I would eat. / I would like to eat.',
         hungarian: 'Bárcsak ennék. / Szeretnék enni.',
         mode: 'optative',
         tense: 'present',
@@ -180,7 +198,8 @@ export const MODES: ModeDefinition[] = [
       },
       {
         id: 'm-opt-3',
-        aigramma: 'Sin lemahónak.',
+        aigramma: 'San lemawunin.',
+        english: 'May they live. / Let them live.',
         hungarian: 'Bárcsak élnének. / Hadd éljenek.',
         mode: 'optative',
         tense: 'present',
@@ -188,7 +207,8 @@ export const MODES: ModeDefinition[] = [
       },
       {
         id: 'm-opt-4',
-        aigramma: 'Ti vidahod!',
+        aigramma: 'Ca vidawuc!',
+        english: 'If only you would see!',
         hungarian: 'Bárcsak látnál!',
         mode: 'optative',
         tense: 'present',
@@ -196,11 +216,13 @@ export const MODES: ModeDefinition[] = [
       },
       {
         id: 'm-opt-5',
-        aigramma: 'Morga sola brilavaho.',
+        aigramma: 'Morga sola brilabuw.',
+        english: 'May the sun shine tomorrow.',
         hungarian: 'Bárcsak holnap ragyogna a nap.',
         mode: 'optative',
         tense: 'future',
         person: '3sg',
+        gloss: 'brila-b-uw',
       },
     ],
   },
@@ -208,17 +230,18 @@ export const MODES: ModeDefinition[] = [
     id: 'conditional',
     name: 'Conditional',
     nameHu: 'Feltételes mód',
-    suffix: { back: 'no', front: 'nö' },
+    suffix: { afterVowel: 'y', afterConsonant: { back: 'uy', front: 'iy' } },
     explanation:
-      'Hypothetical and “if… then…” situations. Use tense markers for past/present/future hypotheses; no extra tenses.',
+      'Hypothetical and “if… then…” situations. Combine with the three tenses — no extra tenses.',
     explanationHu:
-      'Hipotetikus és „ha… akkor…” helyzetek. A múlt/jelen/jövő hipotéziseket a három meglévő idővel fejezzük ki; nincs újabb igeidő.',
-    formation: 'STEM + TENSE + -no/-nö + PERSON; se… (if) + conditional',
-    formationHu: 'TŐ + IDŐ + -no/-nö + SZEMÉLY; se… (ha) + feltételes',
+      'Hipotézis és „ha… akkor…”. A három meglévő idővel kombinálható — nincs újabb igeidő.',
+    formation: 'STEM + TENSE + -y/-uy|-iy + PERSON; ke… (if) + conditional',
+    formationHu: 'TŐ + IDŐ + -y/-uy|-iy + SZEMÉLY; ke… (ha) + feltételes',
     examples: [
       {
         id: 'm-cond-1',
-        aigramma: 'Se mi tempo havanom, mi iranom.',
+        aigramma: 'Ke ma tempo havayum, ma irayum.',
+        english: 'If I had time, I would go.',
         hungarian: 'Ha lenne időm, mennék.',
         mode: 'conditional',
         tense: 'present',
@@ -226,15 +249,18 @@ export const MODES: ModeDefinition[] = [
       },
       {
         id: 'm-cond-2',
-        aigramma: 'Se ti venadanod, mi gajadanom.',
+        aigramma: 'Ke ca venaduyuc, ma gajaduyum.',
+        english: 'If you had come, I would have been glad.',
         hungarian: 'Ha eljöttél volna, örültem volna.',
         mode: 'conditional',
         tense: 'past',
         person: '2sg',
+        gloss: 'vena-d-uy-uc · gaja-d-uy-um',
       },
       {
         id: 'm-cond-3',
-        aigramma: 'Se pluva, min restanomak.',
+        aigramma: 'Ke pluva, man restayumin.',
+        english: 'If it rains, we would stay.',
         hungarian: 'Ha esik az eső, maradnánk.',
         mode: 'conditional',
         tense: 'present',
@@ -242,15 +268,17 @@ export const MODES: ModeDefinition[] = [
       },
       {
         id: 'm-cond-4',
-        aigramma: 'Mi edanom.',
-        hungarian: 'Ennék. (feltételes)',
+        aigramma: 'Ma edayum.',
+        english: 'I would eat.',
+        hungarian: 'Ennék.',
         mode: 'conditional',
         tense: 'present',
         person: '1sg',
       },
       {
         id: 'm-cond-5',
-        aigramma: 'Se si laboravano, si mono havavano.',
+        aigramma: 'Ke sa laborabuy, sa mono havabuy.',
+        english: 'If he/she would work (later), he/she would have money.',
         hungarian: 'Ha dolgozna (majd), pénze lenne.',
         mode: 'conditional',
         tense: 'future',
@@ -260,6 +288,11 @@ export const MODES: ModeDefinition[] = [
   },
 ];
 
-export const MODE_VS_OPTATIVE_NOTE_HU = `Az óhajtó mód (-ho/-hö) kívánságot, reményt fejez ki.
-A feltételes mód (-no/-nö) hipotézist és feltételt fejez ki.
-„Bárcsak jönne!” → óhajtó.  „Ha jönne, örülnék.” → feltételes.`;
+export const MODE_VS_OPTATIVE_NOTE = {
+  en: `Optative (-w) expresses wish or hope.
+Conditional (-y) expresses hypothesis or “if… then…”.
+“May he come!” → optative.  “If he came, I would be glad.” → conditional.`,
+  hu: `Az óhajtó mód (-w) kívánságot fejez ki.
+A feltételes mód (-y) hipotézist fejez ki.
+„Bárcsak jönne!” → óhajtó.  „Ha jönne, örülnék.” → feltételes.`,
+};

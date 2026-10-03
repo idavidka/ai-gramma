@@ -1,24 +1,25 @@
 import type { TenseDefinition } from '../../types/aigramma';
 
 /**
- * Exactly three tenses. No perfect, continuous, or pluperfect morphology.
- * Finer time is expressed with cases, adverbs, and context.
+ * Exactly three tenses. Dual-shaped tense markers.
+ * Present = zero. Past = -d / -ud|-id. Future = -b / -ub|-ib.
  */
 export const TENSES: TenseDefinition[] = [
   {
     id: 'present',
     name: 'Present',
     nameHu: 'Jelen idő',
-    suffix: { back: '', front: '' },
+    suffix: { afterVowel: '', afterConsonant: { back: '', front: '' } },
     explanation:
-      'Zero tense marker. The bare stem plus person ending denotes present / general / habitual action.',
+      'Zero tense marker. Stem + mode + person = present / habitual action.',
     explanationHu:
-      'Nincs időjel. A tő + személyrag jelenti a jelenbeli, általános vagy szokásos cselekvést.',
+      'Nincs időjel. Tő + mód + személy = jelenbeli / szokásos cselekvés.',
     examples: [
       {
         id: 't-prs-1',
         aigramma: 'Kalam.',
-        hungarian: 'Járók / Megyek (gyalog).',
+        english: 'I walk.',
+        hungarian: 'Járók.',
         tense: 'present',
         mode: 'indicative',
         person: '1sg',
@@ -26,6 +27,7 @@ export const TENSES: TenseDefinition[] = [
       {
         id: 't-prs-2',
         aigramma: 'Edam.',
+        english: 'I eat.',
         hungarian: 'Eszem.',
         tense: 'present',
         mode: 'indicative',
@@ -34,6 +36,7 @@ export const TENSES: TenseDefinition[] = [
       {
         id: 't-prs-3',
         aigramma: 'Vidam.',
+        english: 'I see.',
         hungarian: 'Látok.',
         tense: 'present',
         mode: 'indicative',
@@ -41,7 +44,8 @@ export const TENSES: TenseDefinition[] = [
       },
       {
         id: 't-prs-4',
-        aigramma: 'Si solata vid.',
+        aigramma: 'Sa solat vida.',
+        english: 'He/she sees the sun.',
         hungarian: 'Ő látja a napot.',
         tense: 'present',
         mode: 'indicative',
@@ -53,21 +57,24 @@ export const TENSES: TenseDefinition[] = [
     id: 'past',
     name: 'Past',
     nameHu: 'Múlt idő',
-    suffix: { back: 'da', front: 'de' },
-    explanation: 'Past marker -da/-de after the stem, before mode and person.',
-    explanationHu: 'A múlt jele -da/-de a tő után, a mód és a személy előtt.',
+    suffix: { afterVowel: 'd', afterConsonant: { back: 'ud', front: 'id' } },
+    explanation: 'Past marker -d after vowels; -ud/-id after consonants.',
+    explanationHu: 'Múlt jel: magánhangzó után -d; mássalhangzó után -ud/-id.',
     examples: [
       {
         id: 't-pst-1',
-        aigramma: 'Kaladam.',
+        aigramma: 'Kaladum.',
+        english: 'I walked.',
         hungarian: 'Jártam.',
         tense: 'past',
         mode: 'indicative',
         person: '1sg',
+        gloss: 'kala-d-um',
       },
       {
         id: 't-pst-2',
-        aigramma: 'Edadam.',
+        aigramma: 'Edadum.',
+        english: 'I ate.',
         hungarian: 'Ettem.',
         tense: 'past',
         mode: 'indicative',
@@ -75,7 +82,8 @@ export const TENSES: TenseDefinition[] = [
       },
       {
         id: 't-pst-3',
-        aigramma: 'Vidadam.',
+        aigramma: 'Vidadum.',
+        english: 'I saw.',
         hungarian: 'Láttam.',
         tense: 'past',
         mode: 'indicative',
@@ -83,11 +91,13 @@ export const TENSES: TenseDefinition[] = [
       },
       {
         id: 't-pst-4',
-        aigramma: 'Min skolebe iradamak.',
+        aigramma: 'Man skolep iradumin.',
+        english: 'We went into the school.',
         hungarian: 'Az iskolába mentünk.',
         tense: 'past',
         mode: 'indicative',
         person: '1pl',
+        gloss: 'ira-d-umin',
       },
     ],
   },
@@ -95,21 +105,24 @@ export const TENSES: TenseDefinition[] = [
     id: 'future',
     name: 'Future',
     nameHu: 'Jövő idő',
-    suffix: { back: 'va', front: 've' },
-    explanation: 'Future marker -va/-ve after the stem, before mode and person.',
-    explanationHu: 'A jövő jele -va/-ve a tő után, a mód és a személy előtt.',
+    suffix: { afterVowel: 'b', afterConsonant: { back: 'ub', front: 'ib' } },
+    explanation: 'Future marker -b after vowels; -ub/-ib after consonants.',
+    explanationHu: 'Jövő jel: magánhangzó után -b; mássalhangzó után -ub/-ib.',
     examples: [
       {
         id: 't-fut-1',
-        aigramma: 'Kalavam.',
+        aigramma: 'Kalabum.',
+        english: 'I will walk.',
         hungarian: 'Járni fogok.',
         tense: 'future',
         mode: 'indicative',
         person: '1sg',
+        gloss: 'kala-b-um',
       },
       {
         id: 't-fut-2',
-        aigramma: 'Edavam.',
+        aigramma: 'Edabum.',
+        english: 'I will eat.',
         hungarian: 'Enni fogok.',
         tense: 'future',
         mode: 'indicative',
@@ -117,7 +130,8 @@ export const TENSES: TenseDefinition[] = [
       },
       {
         id: 't-fut-3',
-        aigramma: 'Vidavam.',
+        aigramma: 'Vidabum.',
+        english: 'I will see.',
         hungarian: 'Látni fogok.',
         tense: 'future',
         mode: 'indicative',
@@ -125,7 +139,8 @@ export const TENSES: TenseDefinition[] = [
       },
       {
         id: 't-fut-4',
-        aigramma: 'Morga si venava.',
+        aigramma: 'Morga sa venab.',
+        english: 'Tomorrow he/she will come.',
         hungarian: 'Holnap ő jönni fog.',
         tense: 'future',
         mode: 'indicative',
@@ -135,6 +150,11 @@ export const TENSES: TenseDefinition[] = [
   },
 ];
 
-export const TENSE_SCOPE_NOTE_HU = `Az Aigrammában pontosan három igeidő van: múlt, jelen, jövő.
-Nincs külön befejezett, folyamatos vagy régmúlt alak.
-A finomabb időviszonyokat határozókkal (nuna, hiera, morga), esetekkel és kontextussal fejezzük ki.`;
+export const TENSE_SCOPE_NOTE = {
+  en: `Aigramma has exactly three tenses: past, present, future.
+There is no perfect, progressive, or pluperfect morphology.
+Finer time uses adverbs (nuna, hiera, morga), cases, and context.`,
+  hu: `Az Aigrammában pontosan három igeidő van: múlt, jelen, jövő.
+Nincs befejezett, folyamatos vagy régmúlt alak.
+A finomabb időt határozók (nuna, hiera, morga), esetek és kontextus fejezik ki.`,
+};
