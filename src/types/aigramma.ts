@@ -149,11 +149,18 @@ export interface GrammarExample {
 export interface AlphabetLetter {
   letter: string;
   ipa: string;
+  /** Plain-language how-to-say it (English UI). */
+  phonetic: string;
+  /** Plain-language how-to-say it (Hungarian UI). */
+  phoneticHu: string;
   example: string;
   exampleMeaning: string;
   exampleMeaningHu: string;
   type: 'vowel' | 'consonant';
   harmony?: HarmonyClass | 'neutral';
+  /** Optional articulatory hint for consonants, e.g. "bilabial stop". */
+  manner?: string;
+  mannerHu?: string;
 }
 
 export interface NumberEntry {

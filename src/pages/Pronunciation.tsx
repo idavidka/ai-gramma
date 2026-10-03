@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { ExampleList } from '../components/ExampleSentence/ExampleSentence';
 import { GrammarTable } from '../components/GrammarTable/GrammarTable';
 import { RememberBox } from '../components/RememberBox/RememberBox';
@@ -18,6 +19,14 @@ export function Pronunciation() {
       <h1>{pick('Pronunciation & alphabet', 'Kiejtés és ábécé')}</h1>
       <p className="lead">
         {pick(PRONUNCIATION_NOTES.note, PRONUNCIATION_NOTES.noteHu)}
+      </p>
+      <p>
+        <Link to="/sounds">
+          {pick(
+            'Full phonetic guide for every vowel and consonant →',
+            'Teljes fonetikus útmutató minden magánhangzóhoz és mássalhangzóhoz →',
+          )}
+        </Link>
       </p>
 
       <section className="section">
@@ -40,6 +49,11 @@ export function Pronunciation() {
           columns={[
             { key: 'l', header: pick('Letter', 'Betű'), render: (r) => <strong>{r.letter}</strong> },
             { key: 'ipa', header: 'IPA', render: (r) => r.ipa },
+            {
+              key: 'ph',
+              header: pick('Phonetic', 'Fonetika'),
+              render: (r) => (lang === 'hu' ? r.phoneticHu : r.phonetic),
+            },
             { key: 'h', header: pick('Harmony', 'Harmónia'), render: (r) => r.harmony ?? '—' },
             {
               key: 'ex',
@@ -58,6 +72,11 @@ export function Pronunciation() {
           columns={[
             { key: 'l', header: pick('Letter', 'Betű'), render: (r) => <strong>{r.letter}</strong> },
             { key: 'ipa', header: 'IPA', render: (r) => r.ipa },
+            {
+              key: 'ph',
+              header: pick('Phonetic', 'Fonetika'),
+              render: (r) => (lang === 'hu' ? r.phoneticHu : r.phonetic),
+            },
             {
               key: 'ex',
               header: pick('Example', 'Példa'),

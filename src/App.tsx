@@ -12,6 +12,7 @@ import { Pronouns } from './pages/Pronouns';
 import { Pronunciation } from './pages/Pronunciation';
 import { Reference } from './pages/Reference';
 import { Sentences } from './pages/Sentences';
+import { Sounds } from './pages/Sounds';
 import { Tools } from './pages/Tools';
 import { Verbs } from './pages/Verbs';
 import { Vocabulary } from './pages/Vocabulary';
@@ -29,6 +30,7 @@ export default function App() {
             <Route index element={<Home />} />
             <Route path="introduction" element={<Introduction />} />
             <Route path="pronunciation" element={<Pronunciation />} />
+            <Route path="sounds" element={<Sounds />} />
             <Route path="vowel-harmony" element={<VowelHarmony />} />
             <Route path="word-structure" element={<WordStructure />} />
             <Route path="cases" element={<Cases />} />
