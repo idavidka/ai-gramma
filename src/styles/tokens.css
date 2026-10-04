@@ -1,0 +1,22 @@
+:root {
+  --ink: #14262c;
+  --ink-soft: #3a555e;
+  --paper: #eef5f4;
+  --paper-deep: #d9e8e6;
+  --mist: #f4faf8;
+  --teal: #0f6e6a;
+  --teal-deep: #0a4f4c;
+  --teal-soft: #b7d9d5;
+  --copper: #b86b2a;
+  --copper-soft: #f0d7bf;
+  --line: rgba(20, 38, 44, 0.12);
+  --shadow: 0 18px 50px rgba(15, 55, 52, 0.12);
+  --radius: 18px;
+  --radius-sm: 10px;
+  --sidebar-width: 280px;
+  --header-height: 72px;
+  --font-display: 'Fraunces', 'Georgia', serif;
+  --font-body: 'Sora', 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
